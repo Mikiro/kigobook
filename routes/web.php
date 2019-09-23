@@ -18,4 +18,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('posts/spring', 'PostController@Spring')->name('posts.spring');
+Route::get('posts/summer', 'PostController@Summer')->name('posts.summer');
+Route::get('posts/fall', 'PostController@Fall')->name('posts.fall');
+Route::get('posts/winter', 'PostController@Winter')->name('posts.winter');
+
 Route::resource('posts', PostController::class);
+

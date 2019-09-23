@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Category;
 use Illuminate\Support\Facades\Auth;
 
 
@@ -11,8 +12,12 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::simplePaginate(6);
+        
+        // $posts = Post::where('category_id', '1')->paginate(6);
+       
+        $posts = Post::paginate(6);
         return view('posts.index')->with('posts',$posts);
+                                  
                                 
     }
     
@@ -77,6 +82,38 @@ class PostController extends Controller
     public function destroy($id)
     {
        
+    }
+    
+    public function Spring()
+    {
+        
+	$springPosts = Post::where('category_id', '1')->paginate(6);
+
+	return view('posts.spring')->with('springPosts',$springPosts);
+    }
+    
+    public function Summer()
+    {
+        
+	$summerPosts = Post::where('category_id', '2')->paginate(6);
+
+	return view('posts.summer')->with('summerPosts',$summerPosts);
+    }
+    
+    public function fall()
+    {
+        
+	$fallPosts = Post::where('category_id', '3')->paginate(6);
+
+	return view('posts.fall')->with('fallPosts',$fallPosts);
+    }
+    
+    public function Winter()
+    {
+        
+	$winterPosts = Post::where('category_id', '4')->paginate(6);
+
+	return view('posts.winter')->with('winterPosts',$winterPosts);
     }
 
 }
