@@ -29,7 +29,7 @@ class SearchController extends Controller
             })->paginate(4);
 
         }else{//キーワードが入力されていない場合
-            $ca = DB::table('categories')->paginate(4);
+            $categories = DB::table('categories')->paginate(4);
         }
         //検索フォームへ
         return view('search.index',[
