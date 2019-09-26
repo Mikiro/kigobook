@@ -2,22 +2,22 @@
 
 namespace App\Admin\Controllers;
 
-use App\Category;
-use App\Post;
 use App\Word;
+use App\Post;
+use App\Category;
 use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
 
-class CategoryController extends AdminController
+class WordController extends AdminController
 {
     /**
      * Title for current resource.
      *
      * @var string
      */
-    protected $title = 'App\Category';
+    protected $title = 'App\Word';
 
     /**
      * Make a grid builder.
@@ -26,9 +26,10 @@ class CategoryController extends AdminController
      */
     protected function grid()
     {
-        $grid = new Grid(new Category);
+        $grid = new Grid(new Word);
 
         $grid->column('id', __('Id'));
+        $grid->category()->name('季節'); 
         $grid->column('name', __('Name'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
@@ -44,10 +45,10 @@ class CategoryController extends AdminController
      */
     protected function detail($id)
     {
-        $show = new Show(Category::findOrFail($id));
+        $show = new Show(Word::findOrFail($id));
 
         $show->field('id', __('Id'));
-        $show->field('name', __('Name'));
+        $show->field('category_id', __('Category_id'));
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -61,14 +62,12 @@ class CategoryController extends AdminController
      */
     protected function form()
     {
-        
-        
-        $form = new Form(new Category);
-        
+        $categories = Category::pluck('name', 'id');
+        $form = new Form(new Word);
 
         $form->text('name', __('Name'));
-        
-        
+        $form->select('category_id', 'Category')->options($categories);
+
         return $form;
     }
 }

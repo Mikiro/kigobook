@@ -6,8 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    
     public function category()
     {
         return $this->belongsTo('App\Category');
     }
+    
+     public function word()
+    {
+        return $this->belongsTo('App\Word');
+    }
+    
+    
 }

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
+use App\Word;
+
 use Illuminate\Support\Facades\Auth;
 
 

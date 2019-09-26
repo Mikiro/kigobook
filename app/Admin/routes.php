@@ -14,4 +14,6 @@ Route::group([
     $router->resource('users', UserController::class); //追記やで
     $router->resource('posts', PostController::class);
     $router->resource('categories', CategoryController::class);
+    $router->resource('words', WordController::class);
+
 });

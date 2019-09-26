@@ -4,14 +4,14 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class Word extends Model
 {
     public function posts(){
         return $this->hasMany(Post::class);
     }
     
-    public function words(){
-        return $this->hasMany(Word::class);
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
     }
-    
 }
