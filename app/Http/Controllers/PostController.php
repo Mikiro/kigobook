@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
 use App\Post;
 use App\Category;
 use App\Word;
 
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB; 
 
 
 class PostController extends Controller
@@ -117,5 +118,38 @@ class PostController extends Controller
 
 	return view('posts.winter')->with('winterPosts',$winterPosts);
     }
-
+    
+    public function search(Request $request)
+    {   
+        // 検索するテキスト取得
+        $category = Request::get('category');
+        $word = Request::get('word');
+        $author = Request::get('author');
+        $content_upper = Request::get('content_upper');
+        $content_middle = Request::get('content_middle');
+        $content_bottom = Request::get('content_bottom');
+        $query = Post::query();
+        
+        
+        // 検索するテキストが入力されている場合のみ
+        if(!empty($category)) {
+            $query->where('category_id', 'like', '%'.$category.'%');
+        }
+        if(!empty($word)) {
+            $query->where('word_id', 'like', '%'.$word.'%');
+        }
+        if(!empty($author)) {
+            $query->where('author', 'like', '%'.$author.'%');
+        }
+        if(!empty($content_upper)) {
+            $query->where('content_upper', 'like', '%'.$content_upper.'%');
+        }if(!empty($content_middle)) {
+            $query->where('content_middle', 'like', '%'.$content_middle.'%');
+        }if(!empty($content_bottom)) {
+            $query->where('content_bottom', 'like', '%'.$content_bottom.'%');
+        }
+        $data = $query->paginate(7);
+        return view('posts.search', compact('data', 'category', 'word', 'author', 'content_upper', 'content_middle','content_bottom'));
+    }
 }
+

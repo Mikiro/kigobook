@@ -88,6 +88,7 @@
                     <a href="{{ route('posts.summer')}}">夏の句</a>
                     <a href="{{ route('posts.fall')}}">秋の句</a>
                     <a href="{{ route('posts.winter')}}">冬の句</a>
+                    <a href="{{ route('posts.search')}}">検索</a>
                 </div>
             </div>
         </div>

@@ -15,18 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Auth::routes();
-
+    
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::get('posts/spring', 'PostController@Spring')->name('posts.spring');
-Route::get('posts/summer', 'PostController@Summer')->name('posts.summer');
-Route::get('posts/fall', 'PostController@Fall')->name('posts.fall');
-Route::get('posts/winter', 'PostController@Winter')->name('posts.winter');
-Route::get('paginate', 'SearchController@index')->name('search.index');
+// ユーザ機能
+Route::group(['middleware' => ['auth']], function () {
 
-Route::resource('posts', PostController::class);
-Route::get('paginate', 'SearchController@index')->name('search.index');
+    Route::get('posts/spring', 'PostController@Spring')->name('posts.spring');
+    Route::get('posts/summer', 'PostController@Summer')->name('posts.summer');
+    Route::get('posts/fall', 'PostController@Fall')->name('posts.fall');
+    Route::get('posts/winter', 'PostController@Winter')->name('posts.winter');
+    Route::get('posts/search', 'PostController@search')->name('posts.search');
+    
+    Route::resource('posts', PostController::class);
+
+});
 
