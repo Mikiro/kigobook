@@ -131,6 +131,8 @@ class PostController extends Controller
         $query = Post::query();
         
         
+        
+        
         // 検索するテキストが入力されている場合のみ
         if(!empty($category)) {
             $query->where('category_id', 'like', '%'.$category.'%');
