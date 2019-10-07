@@ -119,7 +119,7 @@ class PostController extends Controller
 	return view('posts.winter')->with('winterPosts',$winterPosts);
     }
     
-    public function search(Request $request)
+    public function search()
     {   
         // 検索するテキスト取得
         $category = Request::get('category');
@@ -145,9 +145,11 @@ class PostController extends Controller
         }
         if(!empty($content_upper)) {
             $query->where('content_upper', 'like', '%'.$content_upper.'%');
-        }if(!empty($content_middle)) {
+        }
+        if(!empty($content_middle)) {
             $query->where('content_middle', 'like', '%'.$content_middle.'%');
-        }if(!empty($content_bottom)) {
+        }
+        if(!empty($content_bottom)) {
             $query->where('content_bottom', 'like', '%'.$content_bottom.'%');
         }
         $data = $query->paginate(7);
