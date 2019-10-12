@@ -3,8 +3,9 @@
 @section('content')
 
     {!! Form::open(['method' => 'GET']) !!}
-        季節:{!! Form::text('category', $category) !!}
-        季語:{!! Form::text('word', $word) !!}
+        <!--季節:{!! Form::text('category', $category) !!}-->
+        季節:{!! Form::select('size', \App\Category::select('id', 'name')->get()->pluck('name','id')->prepend( "選択してください", ""), null, ['class' => 'form']) !!}
+        季節:{!! Form::select('size', \App\Word::select('id', 'name')->get()->pluck('name','id')->prepend( "選択してください", ""), null, ['class' => 'form']) !!}
         作者:{!! Form::text('author', $author) !!}
         上の句:{!! Form::text('content_upper', $content_upper) !!}
         中の句:{!! Form::text('content_middle', $content_middle) !!}
