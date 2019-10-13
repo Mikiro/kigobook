@@ -134,10 +134,10 @@ class PostController extends Controller
         
         
         // 検索するテキストが入力されている場合のみ
-        if(!empty($category)) {
+        if(is_numeric($category)) {
             $query->where('category_id', 'like', '%'.$category.'%');
         }
-        if(!empty($word)) {
+        if(is_numeric($word)) {
             $query->where('word_id', 'like', '%'.$word.'%');
         }
         if(!empty($author)) {
