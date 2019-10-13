@@ -3,8 +3,8 @@
 @section('content')
 
     {!! Form::open(['method' => 'GET']) !!}
-        <!--季節:{!! Form::text('category', $category) !!}-->
-        季節:{!! Form::select('category', \App\Category::select('id', 'name')->get()->pluck('name','id')->prepend( "選択してください", ""), null, ['class' => 'form']) !!}
+        季節:{!! Form::text('category_name', $category) !!}
+        <!--季節:{!! Form::select('category', \App\Category::select('id', 'name')->get()->pluck('name','id')->prepend( "選択してください", ""), null, ['class' => 'form']) !!}-->
         季節:{!! Form::select('word', \App\Word::select('id', 'name')->get()->pluck('name','id')->prepend( "選択してください", ""), null, ['class' => 'form']) !!}
         作者:{!! Form::text('author', $author) !!}
         上の句:{!! Form::text('content_upper', $content_upper) !!}
