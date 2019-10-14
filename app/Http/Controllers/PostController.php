@@ -134,11 +134,15 @@ class PostController extends Controller
         
         
         // 検索するテキストが入力されている場合のみ
-        if(!empty($category_name)) {
-            $query->where('category_name', 'like', '%'.$category_name.'%');
+        if(!empty($category)) {
+            $query->orWhereHas('category', function($query) use ($category){ 
+            $query->where('name','like', '%'.$category.'%');
+            })->get();
         }
         if(!empty($word)) {
-            $query->where('word_id', 'like', '%'.$word.'%');
+            $query->orWhereHas('word', function($query) use ($word){ 
+            $query->where('name','like', '%'.$word.'%');
+            })->get();
         }
         if(!empty($author)) {
             $query->where('author', 'like', '%'.$author.'%');

@@ -27,6 +27,7 @@ class PostController extends AdminController
      */
     protected function grid()
     {
+        $categories = Category::pluck('name', 'id');
         $grid = new Grid(new Post);
 
         $grid->column('id', __('Id'));
@@ -51,6 +52,7 @@ class PostController extends AdminController
      */
     protected function detail($id)
     {
+        $categories = Category::pluck('id', 'name');
         $show = new Show(Post::findOrFail($id));
 
         $show->field('id', __('Id'));
