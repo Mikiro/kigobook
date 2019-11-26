@@ -1,23 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
-
-                <div class="panel-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+    <body>
+            <div class="content">
+                <div class="title m-b-md">
+                    季語別俳句集
                 </div>
-            </div>
+
+                <div class="links">
+                    <a href="{{ route('posts.index')}}">俳句一覧</a>
+                    <a href="{{ route('posts.spring')}}">春の句</a>
+                    <a href="{{ route('posts.summer')}}">夏の句</a>
+                    <a href="{{ route('posts.fall')}}">秋の句</a>
+                    <a href="{{ route('posts.winter')}}">冬の句</a>
+                    <a href="{{ route('posts.search')}}">検索</a>
+                </div>
         </div>
-    </div>
-</div>
+    </body>
+
+
 @endsection

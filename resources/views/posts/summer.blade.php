@@ -15,6 +15,7 @@
                         <td>{{ $summerPost->content_middle}}</td>
                         <td>{{ $summerPost->content_bottom}}</td>
                         <td>{{ $summerPost->author}}</td>
+                        <td>{{ $summerPost->word_id}}</td>
                         <td> 
                             <p class="post_date">{{ $summerPost->date}}</p>
                         </td>

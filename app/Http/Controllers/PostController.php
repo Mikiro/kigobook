@@ -7,6 +7,7 @@ use App\Post;
 use App\Category;
 use App\Word;
 
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB; 
 
@@ -16,12 +17,9 @@ class PostController extends Controller
     public function index()
     {
         
-        // $posts = Post::where('category_id', '1')->paginate(6);
-       
         $posts = Post::paginate(6);
         return view('posts.index')->with('posts',$posts);
                                   
-                                
     }
     
     public function create()
@@ -90,13 +88,27 @@ class PostController extends Controller
     public function Spring()
     {
         
-	$springPosts = Post::where('category_id', '1')->paginate(6);
+    $springWords = Word::where('category_id', '1')->get();
+    
+    
+    return view('posts.spring')->with('springWords',$springWords);
+        
+// 	$springPosts = Post::where('category_id', '1')->paginate(6);
 
-	return view('posts.spring')->with('springPosts',$springPosts);
+// 	return view('posts.spring')->with('springPosts',$springPosts);
+    }
+    
+    public function SpringWordPost(){
+        
+        $springWordPosts = Post::where('word_id', request('id'))->get(); 
+        //::where('word_id' ,'1')->get();
+        
+        return view('posts.springWordPost')->with('springWordPosts',$springWordPosts);
     }
     
     public function Summer()
     {
+    $words  = Word::pluck('name', 'id');
         
 	$summerPosts = Post::where('category_id', '2')->paginate(6);
 
@@ -119,9 +131,14 @@ class PostController extends Controller
 	return view('posts.winter')->with('winterPosts',$winterPosts);
     }
     
-    public function search()
+    public function search(){
+        return view('posts.search');
+    }
+    
+    public function result(Request $request)
     {   
         // 検索するテキスト取得
+        $q = Request::get('q');
         $category = Request::get('category');
         $word = Request::get('word');
         $author = Request::get('author');
@@ -131,16 +148,34 @@ class PostController extends Controller
         $query = Post::query();
         
         
-        
-        
         // 検索するテキストが入力されている場合のみ
+        if (!empty($q)) {
+            $query->where(function($query) use ($q){
+            
+               
+                $query->whereHas('category', function($query) use ($q){ 
+                $query->where('name','like', "%".$q ."%");
+                });
+             
+              
+                $query->orWhereHas('word', function($query) use ($q){ 
+                $query->Where('name','like', "%". $q ."%");
+                });
+             
+                $query->orwhere('author', 'LIKE', "%$q%")
+                ->orWhere('content_upper', 'LIKE', "%$q%")
+                ->orWhere('content_middle', 'LIKE', "%$q%")
+                ->orWhere('content_bottom', 'LIKE', "%$q%");
+                });
+        }
+        
         if(!empty($category)) {
-            $query->orWhereHas('category', function($query) use ($category){ 
+            $query->whereHas('category', function($query) use ($category){ 
             $query->where('name','like', '%'.$category.'%');
             })->get();
         }
         if(!empty($word)) {
-            $query->orWhereHas('word', function($query) use ($word){ 
+            $query->whereHas('word', function($query) use ($word){ 
             $query->where('name','like', '%'.$word.'%');
             })->get();
         }
@@ -157,7 +192,7 @@ class PostController extends Controller
             $query->where('content_bottom', 'like', '%'.$content_bottom.'%');
         }
         $data = $query->paginate(7);
-        return view('posts.search', compact('data', 'category', 'word', 'author', 'content_upper', 'content_middle','content_bottom'));
+        return view('posts.result', compact('data', 'category', 'word', 'author', 'content_upper', 'content_middle','content_bottom'));
     }
 }
 
