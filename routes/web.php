@@ -16,7 +16,7 @@ Route::get('/', 'PostController@index');
 
 Auth::routes();
     
-// Route::get('/home', 'PostController@index')->name('home');
+Route::get('/home', 'PostController@index')->name('home');
 
 
 // ユーザ機能
@@ -31,8 +31,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('posts/search', 'PostController@search')->name('posts.search');
     Route::get('posts/result', 'PostController@result')->name('posts.result');
     Route::post('posts/result', 'PostController@result')->name('posts.result');
+    Route::get('posts/kigobook', 'PostController@kigobook')->name('posts.kigobook');
     
     Route::resource('posts', PostController::class);
+    
 
 });
 

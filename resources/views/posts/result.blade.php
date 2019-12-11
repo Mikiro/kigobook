@@ -3,8 +3,10 @@
 @section('content')
 
 <body>
+    <div>{{$data->count()}}句見つかりました。</div>
     <div id="wrapper">
         <div class="container">
+            
             @foreach($data as $post)
             <table>
                 <tr>

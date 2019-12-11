@@ -68,6 +68,7 @@
     }
    
     </style>
+    <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
 </head>
 <body>
     <!--<div id="app">-->

@@ -17,8 +17,15 @@ class PostController extends Controller
     public function index()
     {
         
+        return view('posts.index');
+                                  
+    }
+    
+    public function kigobook()
+    {
+        
         $posts = Post::paginate(6);
-        return view('posts.index')->with('posts',$posts);
+        return view('posts.kigobook')->with('posts',$posts);
                                   
     }
     
@@ -148,6 +155,7 @@ class PostController extends Controller
         $query = Post::query();
         
         
+        
         // 検索するテキストが入力されている場合のみ
         if (!empty($q)) {
             $query->where(function($query) use ($q){
@@ -192,6 +200,7 @@ class PostController extends Controller
             $query->where('content_bottom', 'like', '%'.$content_bottom.'%');
         }
         $data = $query->paginate(7);
+        $post = DB::table('posts')->count();
         return view('posts.result', compact('data', 'category', 'word', 'author', 'content_upper', 'content_middle','content_bottom'));
     }
 }
