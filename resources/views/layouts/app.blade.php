@@ -20,13 +20,12 @@
           -webkit-font-feature-settings: 'pkna';
           font-feature-settings: 'pkna';
           font-size: 20px;
-          height: 720px;
+          
           -moz-column-count: 10;
           -ms-column-count: 10;
           -webkit-column-gap: 10;
           -moz-column-gap: 10;
           -ms-column-gap: 10;
-          height: 20;
          
           line-height: 3.9;
           letter-spacing: 0.06em;
@@ -34,14 +33,14 @@
           -ms-writing-mode: tb-rl;
           text-indent: 1em;
           margin-left: 30px;
-          font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+          /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
           position: absolute;
           right: 0;
           
     }
     
     #wrapper{
-        /*display: flex;*/
+        display: flex;
     }
     
     .container {
