@@ -200,7 +200,7 @@ class PostController extends Controller
         if(!empty($content_bottom)) {
             $query->where('content_bottom', 'like', '%'.$content_bottom.'%');
         }
-        $data = $query->paginate(7);
+        $data = $query->get();
         $post = DB::table('posts')->count();
         return view('posts.result', compact('data', 'category', 'word', 'author', 'content_upper', 'content_middle','content_bottom'));
     }

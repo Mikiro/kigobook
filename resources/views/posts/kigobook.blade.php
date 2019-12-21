@@ -4,11 +4,11 @@
 
     <body1 class="mw-100 overflow-auto">
         <div id="">
-            <div class="mw-100 overflow-auto">
-                <div class="row mw-100 overflow-auto">
+            <div class="">
+                <div class="row ">
                     @foreach($posts as $post)
-                        <table class="mw-100 overflow-auto">
-                            <tr class="mw-100">
+                        <table class="">
+                            <tr class="">
                                 <td>{{ $post->content_upper}}</td>
                                 <td>{{ $post->content_middle}}</td>
                                 <td>{{ $post->content_bottom}}</td>

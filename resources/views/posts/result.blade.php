@@ -2,7 +2,7 @@
 
 @section('content')
 
-<body>
+<body1>
     <div>{{$data->count()}}句見つかりました。</div>
     <div id="wrapper">
         <div class="container">
@@ -19,10 +19,7 @@
             </table>
             @endforeach
         </div>
-        <div class="paginate">
-            {{ $data->links() }}
-        </div>
     </div>
-</body>
+</body1>
 　　　　　　　　　　　　　　　
 @endsection
