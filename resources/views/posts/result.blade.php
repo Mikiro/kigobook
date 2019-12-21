@@ -2,10 +2,10 @@
 
 @section('content')
 
-<body1>
+<body1 class="mw-100 overflow-auto">
     <div>{{$data->count()}}句見つかりました。</div>
-    <div id="wrapper">
-        <div class="container">
+    <div id="">
+        <div class="row">
             
             @foreach($data as $post)
             <table>
