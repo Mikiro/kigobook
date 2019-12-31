@@ -51,6 +51,8 @@
         display: inline-block;
     }
     
+
+    
     /*table {*/
     /*    width: 150px;*/
     /*}*/

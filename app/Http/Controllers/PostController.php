@@ -114,30 +114,51 @@ class PostController extends Controller
         return view('posts.springWordPost')->with('springWordPosts',$springWordPosts);
     }
     
-    public function Summer()
-    {
-    $words  = Word::pluck('name', 'id');
+    public function Summer(){
         
-	$summerPosts = Post::where('category_id', '2')->paginate(6);
-
-	return view('posts.summer')->with('summerPosts',$summerPosts);
+    $summerWords = Word::where('category_id', '2')->get();
+    return view('posts.summer')->with('summerWords',$summerWords);
+        
     }
     
-    public function fall()
+    public function SummerWordPost(){
+        // $words  = Word::pluck('name', 'id');
+        
+	    $summerWordPosts = Post::where('word_id', request('id'))->get(); 
+        return view('posts.summerWordPost')->with('summerWordPosts',$summerWordPosts);
+    }
+    
+    public function fall(){
+        
+    $fallWords = Word::where('category_id', '3')->get();
+    return view('posts.fall')->with('fallWords',$fallWords);
+        
+    }
+    
+    public function fallWordPost()
     {
         
-	$fallPosts = Post::where('category_id', '3')->paginate(6);
+	$fallWordPosts = Post::where('word_id', request('id'))->get(); 
 
-	return view('posts.fall')->with('fallPosts',$fallPosts);
+	return view('posts.fallWordPost')->with('fallWordPosts',$fallWordPosts);
     }
     
     public function Winter()
     {
         
-	$winterPosts = Post::where('category_id', '4')->paginate(6);
-
-	return view('posts.winter')->with('winterPosts',$winterPosts);
+	$winterWords = Word::where('category_id', '4')->get();
+	return view('posts.winter')->with('winterWords',$winterWords);
     }
+    
+    public function winterWordPost()
+    {
+        
+	$winterWordPosts = Post::where('word_id', request('id'))->get(); 
+
+	return view('posts.winterWordPost')->with('winterWordPosts',$winterWordPosts);
+    }
+    
+    
     
     public function search(){
         return view('posts.search');

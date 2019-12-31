@@ -18,9 +18,9 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{{ route('posts.spring')}}">春の季語</a>
-                    <a class="dropdown-item" href="{{ route('posts.summer')}}">夏の句</a>
-                    <a class="dropdown-item" href="{{ route('posts.fall')}}">秋の句</a>
-                    <a class="dropdown-item" href="{{ route('posts.winter')}}">冬の句</a>
+                    <a class="dropdown-item" href="{{ route('posts.summer')}}">夏の季語</a>
+                    <a class="dropdown-item" href="{{ route('posts.fall')}}">秋の季語</a>
+                    <a class="dropdown-item" href="{{ route('posts.winter')}}">冬の季語</a>
                 </div>
             </li>
           </ul>        
