@@ -29,9 +29,20 @@ class CategoryController extends AdminController
         $grid = new Grid(new Category);
 
         $grid->column('id', __('Id'));
-        $grid->column('name', __('Name'));
+        $grid->column('name', __('季節 分類'));
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
+        
+        $grid->filter(function ($filter) {
+            $filter->column(1/2, function ($filter) {
+                $filter->disableIdFilter();
+                // $filter->category()->startsWith('name','季節');      // 前方一致
+                $filter->startsWith('name','季節 分類');
+            });
+            // $filter->column(1/2, function ($filter) {
+            //     $filter->contains('name','名前');          // Like検索
+            // });
+        });
 
         return $grid;
     }

@@ -40,6 +40,17 @@ class PostController extends AdminController
         $grid->word()->name('季語');
         // $grid->column('created_at', __('Created at'));
         // $grid->column('updated_at', __('Updated at'));
+        
+        $grid->filter(function ($filter) {
+            $filter->column(1/2, function ($filter) {
+                $filter->disableIdFilter();
+                $filter->startsWith('author','作者');
+                $filter->startsWith('date','投稿日');
+            });
+            $filter->column(1/2, function ($filter) {
+                $filter->word()->name()->contains('name','季語');          // Like検索
+            });
+        });
 
         return $grid;
     }

@@ -26,15 +26,29 @@ class UserController extends AdminController
     {
         $grid = new Grid(new User);
 
-        $grid->column('id', __('Id'));
-        $grid->column('name', __('Name'));
+       
+        $grid->id('Id')->sortable();
+        $grid->column('name', __('名前'))->sortable();
+        // $grid->name('名前')->sortable();
         $grid->column('email', __('Email'));
-        $grid->column('password', __('Password'));
-        $grid->column('remember_token', __('Remember token'));
-        $grid->column('created_at', __('Created at'));
-        $grid->column('updated_at', __('Updated at'));
+        // $grid->column('password', __('Password'));
+        // $grid->column('remember_token', __('Remember token'));
+        // $grid->column('created_at', __('Created at'));
+        // $grid->column('updated_at', __('Updated at'));
+
+        $grid->filter(function ($filter) {
+            $filter->column(1/2, function ($filter) {
+                $filter->disableIdFilter();
+                $filter->startsWith('name','名前');      // 前方一致
+                $filter->startsWith('email','Email');
+            });
+            // $filter->column(1/2, function ($filter) {
+            //     $filter->contains('name','名前');          // Like検索
+            // });
+        });
 
         return $grid;
+
     }
 
     /**
@@ -74,4 +88,5 @@ class UserController extends AdminController
 
         return $form;
     }
+    
 }
