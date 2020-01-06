@@ -96,7 +96,7 @@ class PostController extends Controller
     public function Spring()
     {
         
-    $springWords = Word::whereIn('category_id', [1,2,3])->get();
+    $springWords = Word::whereIn('category_id', [1,2,3,4,5,6,7])->get();
     
     
     return view('posts.spring')->with('springWords',$springWords);
@@ -116,7 +116,7 @@ class PostController extends Controller
     
     public function Summer(){
         
-    $summerWords = Word::where('category_id', '')->get();
+    $summerWords = Word::whereIn('category_id', [8,9,10,11,12,13,14])->get();
     return view('posts.summer')->with('summerWords',$summerWords);
         
     }
@@ -130,7 +130,7 @@ class PostController extends Controller
     
     public function fall(){
         
-    $fallWords = Word::where('category_id', '')->get();
+    $fallWords = Word::whereIn('category_id', [15,16,17,18,19,20,21])->get();
     return view('posts.fall')->with('fallWords',$fallWords);
         
     }
@@ -146,7 +146,7 @@ class PostController extends Controller
     public function Winter()
     {
         
-	$winterWords = Word::where('category_id', '')->get();
+	$winterWords = Word::whereIn('category_id', [22,23,24,25,26,27,28])->get();
 	return view('posts.winter')->with('winterWords',$winterWords);
     }
     
