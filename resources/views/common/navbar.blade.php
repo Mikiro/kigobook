@@ -17,10 +17,11 @@
                 季節
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{{ route('posts.spring')}}">春の季語</a>
-                    <a class="dropdown-item" href="{{ route('posts.summer')}}">夏の季語</a>
-                    <a class="dropdown-item" href="{{ route('posts.fall')}}">秋の季語</a>
-                    <a class="dropdown-item" href="{{ route('posts.winter')}}">冬の季語</a>
+                    <a class="dropdown-item" href="{{ route('posts.springWords')}}">春の季語</a>
+                    <a class="dropdown-item" href="{{ route('posts.summerWords')}}">夏の季語</a>
+                    <a class="dropdown-item" href="{{ route('posts.fallWords')}}">秋の季語</a>
+                    <a class="dropdown-item" href="{{ route('posts.winterWords')}}">冬の季語</a>
+                    <a class="dropdown-item" href="{{ route('posts.newYearWords')}}">新年の季語</a>
                 </div>
             </li>
           </ul>        

@@ -93,13 +93,13 @@ class PostController extends Controller
        
     }
     
-    public function Spring()
+    public function SpringWords()
     {
         
     $springWords = Word::whereIn('category_id', [1,2,3,4,5,6,7])->get();
     
     
-    return view('posts.spring')->with('springWords',$springWords);
+    return view('posts.springWords')->with('springWords',$springWords);
         
 // 	$springPosts = Post::where('category_id', '1')->paginate(6);
 
@@ -114,10 +114,10 @@ class PostController extends Controller
         return view('posts.springWordPost')->with('springWordPosts',$springWordPosts);
     }
     
-    public function Summer(){
+    public function SummerWords(){
         
     $summerWords = Word::whereIn('category_id', [8,9,10,11,12,13,14])->get();
-    return view('posts.summer')->with('summerWords',$summerWords);
+    return view('posts.summerWords')->with('summerWords',$summerWords);
         
     }
     
@@ -128,10 +128,10 @@ class PostController extends Controller
         return view('posts.summerWordPost')->with('summerWordPosts',$summerWordPosts);
     }
     
-    public function fall(){
+    public function fallWords(){
         
     $fallWords = Word::whereIn('category_id', [15,16,17,18,19,20,21])->get();
-    return view('posts.fall')->with('fallWords',$fallWords);
+    return view('posts.fallWords')->with('fallWords',$fallWords);
         
     }
     
@@ -143,11 +143,11 @@ class PostController extends Controller
 	return view('posts.fallWordPost')->with('fallWordPosts',$fallWordPosts);
     }
     
-    public function Winter()
+    public function WinterWords()
     {
         
 	$winterWords = Word::whereIn('category_id', [22,23,24,25,26,27,28])->get();
-	return view('posts.winter')->with('winterWords',$winterWords);
+	return view('posts.winterWords')->with('winterWords',$winterWords);
     }
     
     public function winterWordPost()
@@ -156,6 +156,21 @@ class PostController extends Controller
 	$winterWordPosts = Post::where('word_id', request('id'))->get(); 
 
 	return view('posts.winterWordPost')->with('winterWordPosts',$winterWordPosts);
+    }
+    
+    public function newYearWords()
+    {
+        
+	$newYearWords = Word::whereIn('category_id', [29,30,31,32,33,34,35])->get();
+	return view('posts.newYearWords')->with('newYearWords',$newYearWords);
+    }
+    
+    public function newYearWordPost()
+    {
+        
+	$newYearWordPosts = Post::where('word_id', request('id'))->get(); 
+
+	return view('posts.newYearWordPost')->with('nearYearWordPosts',$newYearWordPosts);
     }
     
     
