@@ -170,7 +170,7 @@ class PostController extends Controller
         
 	$newYearWordPosts = Post::where('word_id', request('id'))->get(); 
 
-	return view('posts.newYearWordPost')->with('nearYearWordPosts',$newYearWordPosts);
+	return view('posts.newYearWordPost')->with('newYearWordPosts',$newYearWordPosts);
     }
     
     
