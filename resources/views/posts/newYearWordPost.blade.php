@@ -10,7 +10,7 @@
             <div class="post_container">
                 @foreach($newYearWordPosts as $newYearWordPost)
                 <table>
-                    <tr>
+                    <tr class="border-left">
                         <td>{{ $newYearWordPost->content_upper}}{{ $newYearWordPost->content_middle}}{{ $newYearWordPost->content_bottom}}</td>
                         <td>{{ $newYearWordPost->author}}</td>
                         <td><p class="post_date">{{ $newYearWordPost->date}}</p></td>

@@ -10,7 +10,7 @@
             <div class="post_container">
                 @foreach($winterWordPosts as $winterWordPost)
                 <table>
-                    <tr>
+                    <tr class="border-left">
                         <td>{{ $winterWordPost->content_upper}}{{ $winterWordPost->content_middle}}{{ $winterWordPost->content_bottom}}</td>
                         <td>{{ $winterWordPost->author}}</td>
                         <td><p class="post_date">{{ $winterWordPost->date}}</p></td>

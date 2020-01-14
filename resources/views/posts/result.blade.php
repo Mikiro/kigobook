@@ -9,7 +9,7 @@
             
             @foreach($data as $post)
             <table>
-                <tr>
+                <tr class="border-left">
                     <td>{{ $post->content_upper}}{{ $post->content_middle}}{{ $post->content_bottom}}</td>
                     <td>{{ $post->author}}</td>
                     <td><p class="post_date">{{ $post->date}}</p></td>
