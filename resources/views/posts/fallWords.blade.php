@@ -2,22 +2,30 @@
 
 @section('content')
       
-    
-        <div class="body1_header">
-            <h1 class="">季語別俳句集</h1>
-        </div>
-        <div id="wrapper">
-            <div class="post_container">
-                @foreach($fallWords as $fallWord)
-                    <table>
-                        <tr>
-                            <td><a href="{{ route('posts.fallWordPost', $fallWord) }}">{{ $fallWord->name }}</a></td>
-                            <!--ルートパラメータをルートメソッドに渡す必要がある。-->
-                        </tr>
-                    </table>
-                @endforeach
+    <div class="card text-center">
+            <div class="card-header">
+                <h1>季語別俳句集</h1>
             </div>
-        </div>
+            <div class="card-body">
+                <div "table-responsive-md">
+                    
+                    <table class="table">
+                       @foreach ($fallWords->chunk(8) as $chunk)
+                        <div class="row">
+                               @foreach($chunk as $fallWord) 
+                                <a href="{{ route('posts.fallWordPost', $fallWord) }}" class="btn btn-primary">{{ $fallWord->name }}</a>
+                               @endforeach
+                         </div> 
+                        
+                       @endforeach
+                    </table>
+                    
+                </div>       
+            </div>
+            <div class="card-footer text-muted">
+                
+            </div>
+        </div>  
  
 @endsection
 
