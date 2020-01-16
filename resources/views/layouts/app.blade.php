@@ -15,7 +15,9 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     
     <style>
+    
     body1 {
+          
           font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
           -webkit-font-feature-settings: 'pkna';
           font-feature-settings: 'pkna';
@@ -36,6 +38,7 @@
           /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
           position: absolute;
           right: 0;
+          width: 100vw;
           
     }
     
