@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <body1 class="mw-100 overflow-auto">
+    <body1 class="mw-100 overflow-auto max-width:100%">
         <div id="">
             <div class="">
                 <div class="row ">
