@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <body1 class="mw-100 overflow-auto max-width:100%">
-        <div id="">
-            <div class="">
+    <body1 class="overflow-auto ">
+       
+            <div class="width: 100vw;">
                 <div class="row ">
                     @foreach($posts as $post)
                         <table class="">
@@ -19,7 +19,7 @@
                 
                 </div>
             </div>
-        </div>
+        
     </body1>
  
 @endsection
