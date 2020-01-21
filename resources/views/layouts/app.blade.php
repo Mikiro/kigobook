@@ -15,9 +15,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     
     <style>
-    
     body1 {
-          
           font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
           -webkit-font-feature-settings: 'pkna';
           font-feature-settings: 'pkna';
@@ -38,40 +36,14 @@
           /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
           position: absolute;
           right: 0;
-          width: 100vw;
-          height: 100%;
           
     }
     
-    #wrapper{
-        display: flex;
-    }
-    
-    .container {
-        height: 80%;
-        margin-right: 60px;
-        margin-top: 20px;
-        margin-bottom: 0;
-        display: inline-block;
-    }
-    
-
-    
-    /*table {*/
-    /*    width: 150px;*/
+    /*.post_date{*/
+        /*text-combine-upright: all;*/
+    /*    font-size: 30px;*/
     /*}*/
     
-    .post_date{
-        text-combine-upright: all;
-        font-size: 30px;
-    }
-    
-    .paginate{
-        -webkit-writing-mode: horizontal-tb;
-        text-align: center;
-        height: 20%;
-    }
-   
     </style>
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
 </head>

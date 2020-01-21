@@ -2,24 +2,25 @@
 
 @section('content')
 
-    <body1 class="overflow-auto ">
-       
-            <div class="width: 100vw;">
-                <div class="row ">
+    <body1 class="mw-100 overflow-auto">
+           
+                <div class="row h-100">
                     @foreach($posts as $post)
-                        <table class="">
-                            <tr class="border-left">
-                                <td class="text-nowrap">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>
-                                <td>{{$post->author}}</td>
-                                <td> <p class="post_date">{{$post->date}}</p></td>
+                    <div class="table-responsive">
+                        <table class="border-left">
+                            <tr class="h-75">
+                                <td class="text-nowrap"><h2 style="height: 520px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h></td>
                             </tr>
-                            
+                            <tr class="h-75">
+                                <!--<td style="height: 100px;><h2 style="height: 100px;">&nbsp;</h2></td>-->
+                                <td class="h-50"><h2 class="mb-auto" style="height: 300px;">{{$post->author}}</h2></td>
+                                <td class="h-25"><h2 class="post_date">{{$post->date}}</h2></td>
+                            </tr>
                         </table>
+                    </div>
                     @endforeach
-                
                 </div>
-            </div>
-        
+            
     </body1>
  
 @endsection
