@@ -19,8 +19,8 @@
           font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
           -webkit-font-feature-settings: 'pkna';
           font-feature-settings: 'pkna';
-          font-size: 20px;
           
+         
           -moz-column-count: 10;
           -ms-column-count: 10;
           -webkit-column-gap: 10;
@@ -31,17 +31,24 @@
           letter-spacing: 0.06em;
           -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
+          writing-mode: tb-rl;
           text-indent: 1em;
           margin-left: 30px;
           /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
           position: absolute;
           right: 0;
           
+    
     }
     
     /*.post_date{*/
         /*text-combine-upright: all;*/
     /*    font-size: 30px;*/
+    /*}*/
+    
+    /*.poem h2{*/
+    /*    @media (max-width: 575.98px) {*/
+    
     /*}*/
     
     </style>
