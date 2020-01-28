@@ -4,18 +4,31 @@
 
     <body1 class="mw-100 overflow-auto">
            
-                <div class="row h-100">
+                <!--<div class="row">-->
+                <!--    @foreach($posts as $post)-->
+                <!--    <div class="poem">-->
+                <!--        <table class="border-left">-->
+                <!--            <tr class="">-->
+                <!--                <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 200px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2></td>-->
+                <!--            </tr>-->
+                <!--            <tr class="">-->
+                <!--                <td><div class="h2 text-nowrap" style="margin-top: 240px;">{{$post->author}}</div></td>-->
+                <!--                <td class=""><div class="h2 text-nowrap" style="height=""margin-top: 5px">{{$post->date}}</div></td>-->
+                <!--            </tr>-->
+                <!--        </table>-->
+                <!--    </div>-->
+                <!--    @endforeach-->
+                <!--</div>-->
+                
+                <div class="container-fluid">
                     @foreach($posts as $post)
-                    <div class="poem">
-                        <table class="border-left">
-                            <tr class="h-75">
-                                <td class="text-nowrap"><h2 style="height: 520px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h></td>
-                            </tr>
-                            <tr class="h-75">
-                                <td class="h-65"><h2 class="" style="margin-top: 260px">{{$post->author}}</h2></td>
-                                <td class="h-35"><h2 class="post_date" style="margin-top: 5px">{{$post->date}}</h2></td>
-                            </tr>
-                        </table>
+                    <div class="row">
+                        <div class="col-">
+                            <h2 class="ext-nowrap mt-0 mb-0" style="height: 500px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col h2 text-nowrap">{{$post->author}}</div>
+                        <div class="col h2 text-nowrap">{{$post->date}}</div>
                     </div>
                     @endforeach
                 </div>

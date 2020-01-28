@@ -31,6 +31,7 @@
           letter-spacing: 0.06em;
           -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
+          -epubg-writing-mode: tb-rl;
           writing-mode: tb-rl;
           text-indent: 1em;
           margin-left: 30px;
@@ -38,13 +39,9 @@
           position: absolute;
           right: 0;
           
-    
     }
     
-    /*.post_date{*/
-        /*text-combine-upright: all;*/
-    /*    font-size: 30px;*/
-    /*}*/
+    
     
     /*.poem h2{*/
     /*    @media (max-width: 575.98px) {*/
