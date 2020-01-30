@@ -23,7 +23,6 @@
           /*margin-left: 30px;*/
           
           /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
-          /*position: absolute;*/
           right: 0;
     
     }
@@ -36,9 +35,9 @@
     
     </style>
 
-    <div class="vertical mw-100 mh-100 overflow-auto position-static">
+    <div class="vertical mw-100 overflow-auto">
            
-                <div class="container-sm row">
+                <div class="container-lg row">
                     @foreach($posts as $post)
                     <div class="poem">
                         <table class="border-left">
