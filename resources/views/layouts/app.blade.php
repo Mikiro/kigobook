@@ -13,43 +13,6 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
-    <style>
-    body1 {
-          font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
-          -webkit-font-feature-settings: 'pkna';
-          /*font-feature-settings: 'pkna';*/
-          
-         
-          -moz-column-count: 10;
-          -ms-column-count: 10;
-          -webkit-column-gap: 10;
-          -moz-column-gap: 10;
-          -ms-column-gap: 10;
-         
-          line-height: 3.9;
-          letter-spacing: 0.06em;
-          -webkit-writing-mode: vertical-rl;
-          -ms-writing-mode: tb-rl;
-          -epubg-writing-mode: tb-rl;
-          writing-mode: tb-rl;
-          text-indent: 1em;
-          /*margin-left: 30px;*/
-          
-          /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
-          /*position: absolute;*/
-          right: 0;
-          
-    }
-    
-    
-    
-    /*.poem h2{*/
-    /*    @media (max-width: 575.98px) {*/
-    
-    /*}*/
-    
-    </style>
     <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
 </head>
 <body>
