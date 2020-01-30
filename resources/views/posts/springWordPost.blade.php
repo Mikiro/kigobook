@@ -6,14 +6,16 @@
         <div class="body1_header">
             <h1 class="">季語別俳句集</h1>
         </div>
-        <div id="wrapper">
-            <div class="post_container">
+        <div>
+            <div class="container">
                 @foreach($springWordPosts as $springWordPost)
                 <table>
+                    <tr>
+                        <td><h2>{{ $springWordPost->content_upper}}{{ $springWordPost->content_middle}}{{ $springWordPost->content_bottom}}</h2></td>
+                    </tr>
                     <tr class="border-left">
-                        <td>{{ $springWordPost->content_upper}}{{ $springWordPost->content_middle}}{{ $springWordPost->content_bottom}}</td>
-                        <td>{{ $springWordPost->author}}</td>
-                        <td><p class="post_date">{{ $springWordPost->date}}</p></td>
+                        <td><h2>{{ $springWordPost->author}}</h2></td>
+                        <td><h2 class="post_date">{{ $springWordPost->date}}</h2></td>
                     </tr>
                 </table>
                 @endforeach

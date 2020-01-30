@@ -20,7 +20,7 @@
                 <!--    @endforeach-->
                 <!--</div>-->
                 
-                <div class="container-fluid ">
+                <div class="container">
                     @foreach($posts as $post)
                     <div class="row no-gutters">
                         <div class="col-12">
