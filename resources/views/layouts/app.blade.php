@@ -35,7 +35,7 @@
           writing-mode: tb-rl;
           text-indent: 1em;
           /*margin-left: 30px;*/
-          /*padding-top: 70px;*/
+          
           /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
           /*position: absolute;*/
           right: 0;
