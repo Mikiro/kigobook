@@ -18,7 +18,7 @@
     body1 {
           font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
           -webkit-font-feature-settings: 'pkna';
-          font-feature-settings: 'pkna';
+          /*font-feature-settings: 'pkna';*/
           
          
           -moz-column-count: 10;
@@ -37,7 +37,7 @@
           /*margin-left: 30px;*/
           padding-top: 70px;
           /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
-          position: absolute;
+          /*position: absolute;*/
           right: 0;
           
     }
