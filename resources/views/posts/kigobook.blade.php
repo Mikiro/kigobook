@@ -36,7 +36,7 @@
     
     </style>
 
-    <div class="vertical mw-100 mh-100 overflow-auto">
+    <div class="vertical mw-100 mh-100 overflow-auto position-absolute">
            
                 <div class="container-sm row">
                     @foreach($posts as $post)
