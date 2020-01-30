@@ -7,7 +7,6 @@
           -webkit-font-feature-settings: 'pkna';
           /*font-feature-settings: 'pkna';*/
           
-         
           -moz-column-count: 10;
           -ms-column-count: 10;
           -webkit-column-gap: 10;
@@ -26,14 +25,20 @@
           /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
           /*position: absolute;*/
           right: 0;
-          
+    
     }
+    
+    @media (min-width: 800px) {
+    
+    
+          
+        }
     
     </style>
 
     <div class="vertical mw-100 mh-100 overflow-auto">
            
-                <div class="row">
+                <div class="container-sm row">
                     @foreach($posts as $post)
                     <div class="poem">
                         <table class="border-left">
