@@ -31,7 +31,7 @@
     
     </style>
 
-    <div class="vertical mw-100 overflow-auto">
+    <div class="vertical mw-100 mh-100 overflow-auto">
            
                 <div class="row">
                     @foreach($posts as $post)
