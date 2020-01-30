@@ -20,14 +20,13 @@
                 <!--    @endforeach-->
                 <!--</div>-->
                 
-                <div class="container">
+                <div class="container-fluid ">
                     @foreach($posts as $post)
-                    <div class="row">
-                        <div class="col-">
-                            <h2 class="ext-nowrap mt-0 mb-0" style="height: 500px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2>
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <h2 class="text-nowrap mt-0 mb-0" style="height: 600px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2>
                         </div>
-                        <div class="w-100"></div>
-                        <div class="col h2 text-nowrap">{{$post->author}}</div>
+                        <div class="col h2 text-nowrap" style="height: 300px margin-top: 240px;">{{$post->author}}</div>
                         <div class="col h2 text-nowrap">{{$post->date}}</div>
                     </div>
                     @endforeach
