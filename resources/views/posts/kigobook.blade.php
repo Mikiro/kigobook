@@ -24,8 +24,20 @@
           
           /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
           right: 0;
-    
-    }
+          
+          font-size:1.6rem;/* 16px*/
+          
+
+          
+          
+     }
+     
+     .vertical h2 {
+         font-size: 24px;
+         font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         line-height: 1.3;
+
+     }
     
     @media (min-width: 800px) {
     
@@ -37,7 +49,7 @@
 
     <div class="vertical mw-100 overflow-auto">
            
-                <div class="container-lg row">
+                <div class="row">
                     @foreach($posts as $post)
                     <div class="poem">
                         <table class="border-left">
@@ -45,8 +57,8 @@
                                 <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 200px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2></td>
                             </tr>
                             <tr class="">
-                                <td><div class="h2 text-nowrap" style="margin-top: 240px;">{{$post->author}}</div></td>
-                                <td class=""><div class="h2 text-nowrap" style="height=""margin-top: 5px">{{$post->date}}</div></td>
+                                <td><h2 class="text-nowrap" style="margin-top: 240px;">{{$post->author}}</h2></td>
+                                <td class=""><h2 class="text-nowrap" style="height=""margin-top: 5px">{{$post->date}}</h2></td>
                             </tr>
                         </table>
                     </div>
