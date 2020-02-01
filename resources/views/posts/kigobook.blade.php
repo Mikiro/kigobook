@@ -51,15 +51,17 @@
            
                 <div class="row">
                     @foreach($posts as $post)
-                    <div class="poem">
+                    <div style="height: 600px;">
                         <table class="border-left">
-                            <tr class="">
-                                <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 200px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2></td>
-                            </tr>
-                            <tr class="">
-                                <td><h2 class="text-nowrap" style="margin-top: 240px;">{{$post->author}}</h2></td>
-                                <td class=""><h2 class="text-nowrap" style="height=""margin-top: 5px">{{$post->date}}</h2></td>
-                            </tr>
+                                <tr class="">
+                                    <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 370px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2></td>
+                                </tr>
+                                <tr>
+                                    
+                                        <td><h2 class="text-nowrap" style="margin-top: 210px; height: 140px;">{{$post->author}}</h2></td>
+                                    
+                                    <td><h2 class="text-nowrap" style="height=" "margin-top: 5px">{{$post->date}}</h2></td>
+                                </tr>
                         </table>
                     </div>
                     @endforeach
