@@ -51,7 +51,7 @@
            
                 <div class="row">
                     @foreach($posts as $post)
-                    <div style="height: 600px;">
+                    <div style="height: 500px;">
                         <table class="border-left">
                                 <tr class="">
                                     <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 370px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2></td>
