@@ -10,7 +10,7 @@
                 <div "table-responsive-md">
                     
                     <table class="table">
-                       @foreach ($winterWords->chunk(10) as $chunk)
+                       @foreach ($winterWords->chunk(15) as $chunk)
                         <div class="row">
                                @foreach($chunk as $winterWord)
                                <div class="m-2">

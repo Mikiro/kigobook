@@ -10,7 +10,7 @@
                 <div "table-responsive-md">
                     
                     <table class="table">
-                       @foreach ($springWords->chunk(7) as $chunk)
+                       @foreach ($springWords->chunk(15) as $chunk)
                         <div class="row">
                                @foreach($chunk as $springWord) 
                                 <div class="m-2">
