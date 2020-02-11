@@ -56,7 +56,7 @@
                             </tr>
                             <tr>
                                 <td><h2 class="text-nowrap" style="margin-top: 150px; height: 130px;">{{$post->author}}</h2></td>
-                                <td><h2 class="text-nowrap text-combine" style="height: 30px margin-top: 5px">{{$post->date}}</h2></td>
+                                <td><h2 class="text-nowrap" style="height: 30px margin-top: 5px">{{$post->date}}</h2></td>
                                 <td><h2 class="text-nowrap text-combine" style="height: 15px; margin-top: 0px">{{$post->year}}</h2></td>
                             </tr>
                         </table>
