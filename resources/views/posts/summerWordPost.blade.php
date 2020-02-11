@@ -1,25 +1,68 @@
 @extends('layouts.app')
 
 @section('content')
-      
-    <body1 >
-        <div class="body1_header">
-            <h1 class="">季語別俳句集</h1>
-        </div>
-        <div id="wrapper">
-            <div class="post_container">
-                @foreach($summerWordPosts as $summerWordPost)
+
+    <style>
+    .vertical {
+          font-family: 'Yu Mincho', YuMincho, 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'HGP明朝B', serif;
+          -webkit-font-feature-settings: 'pkna';
+          /*font-feature-settings: 'pkna';*/
+          
+          -moz-column-count: 10;
+          -ms-column-count: 10;
+          -webkit-column-gap: 10;
+          -moz-column-gap: 10;
+          -ms-column-gap: 10;
+
+          line-height: 3.9;
+          letter-spacing: 0.06em;
+          -webkit-writing-mode: vertical-rl;
+          -ms-writing-mode: tb-rl;
+          -epubg-writing-mode: tb-rl;
+          writing-mode: tb-rl;
+          text-indent: 1em;
+          /*margin-left: 30px;*/
+          
+          /*font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;*/
+          right: 0;
+          
+          font-size:1.6rem;/* 16px*/
+          
+     }
+     
+     .vertical h2 {
+         font-size: 24px;
+         font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         line-height: 1.3;
+
+     }
+     
+     .text-combine{
+        text-combine-upright: all;
+        -webkit-text-combine: horizontal;
+        -ms-text-combine-horizontal: all;
+    }
+    
+    </style>
+    
+    <div class="vertical mw-100 overflow-auto mx-auto">
+        <div class="row">
+        @foreach($summerWordPosts as $summerWordPost)
+            <div class="border-left" style="height: 500px;">
                 <table>
-                    <tr class="border-left">
-                        <td>{{ $summerWordPost->content_upper}}{{ $summerWordPost->content_middle}}{{ $summerWordPost->content_bottom}}</td>
-                        <td>{{ $summerWordPost->author}}</td>
-                        <td><p class="post_date">{{ $summerWordPost->date}}</p></td>
+                    <tr>
+                        <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 350px;">{{ $summerWordPost->content_upper}}{{ $summerWordPost->content_middle}}{{ $summerWordPost->content_bottom}}</h2></td>
+                    </tr>
+                    <tr>
+                        <td><h2 class="text-nowrap" style="margin-top: 150px; height: 130px;">{{ $summerWordPost->author}}</h2></td>
+                        <td><h2 class="text-nowrap text-combine" style="height: 30px margin-top: 5px">{{$summerWordPost->date}}</h2></td>
+                        <td><h2 class="text-nowrap text-combine" style="height: 15px; margin-top: 0px">{{$summerWordPost->year}}</h2></td>
                     </tr>
                 </table>
-                @endforeach
             </div>
+        @endforeach
         </div>
-    </body1>
+    </div>
  
 @endsection
 

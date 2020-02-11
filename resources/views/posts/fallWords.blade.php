@@ -6,14 +6,16 @@
             <div class="card-header">
                 <h1>季語別俳句集</h1>
             </div>
-            <div class="card-body">
+            <div class="card-body mx-auto">
                 <div "table-responsive-md">
                     
                     <table class="table">
-                       @foreach ($fallWords->chunk(8) as $chunk)
+                       @foreach ($fallWords->chunk(10) as $chunk)
                         <div class="row">
                                @foreach($chunk as $fallWord) 
-                                <a href="{{ route('posts.fallWordPost', $fallWord) }}" class="btn btn-primary">{{ $fallWord->name }}</a>
+                               <div class="m-2">
+                                    <a class="btn btn-secondary" href="{{ route('posts.fallWordPost', $fallWord) }}" role="button">{{ $fallWord->name }}</a>
+                               </div>
                                @endforeach
                          </div> 
                         

@@ -2,18 +2,20 @@
 
 @section('content')
   
-        <div class="card text-center">
+        <div class="card text-center"> 
             <div class="card-header">
-                <h1>季語別俳句集</h1>
+                <h1>春の季語</h1>
             </div>
-            <div class="card-body">
+            <div class="card-body mx-auto">
                 <div "table-responsive-md">
                     
                     <table class="table">
-                       @foreach ($springWords->chunk(8) as $chunk)
+                       @foreach ($springWords->chunk(10) as $chunk)
                         <div class="row">
                                @foreach($chunk as $springWord) 
-                                <a href="{{ route('posts.springWordPost', $springWord) }}" class="btn btn-primary">{{ $springWord->name }}</a>
+                                <div class="m-2">
+                                    <a class="btn btn-warning" href="{{ route('posts.springWordPost', $springWord) }}" role="button">{{ $springWord->name }}</a>
+                                </div>
                                @endforeach
                          </div> 
                         
