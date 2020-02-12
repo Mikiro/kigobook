@@ -26,7 +26,7 @@
           right: 0;
           
           font-size:1.6rem;/* 16px*/
-          
+          display: block;
      }
      
      .vertical h2 {
