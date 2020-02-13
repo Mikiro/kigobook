@@ -19,7 +19,7 @@
           -webkit-writing-mode: vertical-rl;
           -ms-writing-mode: tb-rl;
           -epubg-writing-mode: tb-rl;
-          writing-mode: tb-rl;
+          /*writing-mode: tb-rl;*/
           text-indent: 1em;
           /*margin-left: 30px;*/
           
