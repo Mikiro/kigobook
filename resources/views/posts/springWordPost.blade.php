@@ -45,8 +45,8 @@
     
     </style>
     
-    <div class="vertical mw-100 overflow-auto mx-auto" style="text-align: center;">
-        <div class="row">
+    <div class="vertical mw-100 overflow-auto mx-auto">
+        <div class="row" style="margin:0px auto;">
         @foreach($springWordPosts as $springWordPost)
             <div class="border-left" style="height: 500px;">
                 <table>
