@@ -27,7 +27,7 @@
           right: 0;
           
           font-size:1.6rem;/* 16px*/
-          /*display: flex;*/
+          display: block;
           text-align:center;
      }
      
