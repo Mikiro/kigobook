@@ -27,8 +27,8 @@
           right: 0;
           
           font-size:1.6rem;/* 16px*/
-          display: flex;
-          align-items: center;
+          /*display: flex;*/
+          text-align:center;
      }
      
      .vertical h2 {
