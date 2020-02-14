@@ -27,7 +27,8 @@
           right: 0;
           
           font-size:1.6rem;/* 16px*/
-          display: block;
+          display: flex;
+          align-items: center;
      }
      
      .vertical h2 {
@@ -45,7 +46,7 @@
     
     </style>
     
-    <div class="vertical mw-100 overflow-auto mx-auto">
+    <div class="vertical mw-100 overflow-auto">
         <div class="row" style="margin:0px auto;">
         @foreach($springWordPosts as $springWordPost)
             <div class="border-left" style="height: 500px;">
