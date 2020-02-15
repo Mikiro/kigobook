@@ -48,8 +48,11 @@
     <div class="vertical mw-100 overflow-auto mx-auto">
         <div class="row">
         @foreach($summerWordPosts as $summerWordPost)
-            <div class="border-left" style="height: 500px;">
+            <div class="border-left" style="height: 500px; margin-right: 30px;">
                 <table>
+                    <tr>
+                        <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 200px;">{{$summerWordPost->word->name}}</h3></td>
+                    </tr>
                     <tr>
                         <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 350px;">{{ $summerWordPost->content_upper}}{{ $summerWordPost->content_middle}}{{ $summerWordPost->content_bottom}}</h2></td>
                     </tr>

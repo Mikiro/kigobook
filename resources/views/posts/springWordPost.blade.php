@@ -28,7 +28,7 @@
           
           font-size:1.6rem;/* 16px*/
           display: block;
-          text-align:center;
+          
      }
      
      .vertical h2 {
@@ -47,10 +47,13 @@
     </style>
     
     <div class="vertical mw-100 overflow-auto mx-auto">
-        <div class="row" style="margin:0px auto;">
+        <div class="row">
         @foreach($springWordPosts as $springWordPost)
-            <div class="border-left" style="height: 500px;">
+            <div class="border-left" style="height: 500px; margin-right: 30px;">
                 <table>
+                    <tr>
+                        <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 200px;">{{$springWordPost->word->name}}</h3></td>
+                    </tr>
                     <tr>
                         <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 350px;">{{ $springWordPost->content_upper}}{{ $springWordPost->content_middle}}{{ $springWordPost->content_bottom}}</h2></td>
                     </tr>

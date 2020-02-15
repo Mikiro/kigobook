@@ -24,7 +24,6 @@ class PostController extends Controller
     public function kigobook()
     {
         
-        // $posts = Post::simplePaginate(6);
         $posts = Post::all();
         return view('posts.kigobook')->with('posts',$posts);
                                   

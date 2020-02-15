@@ -6,7 +6,7 @@
             <div class="card-header">
                 <h1>季語別俳句集</h1>
             </div>
-            <div class="card-body">
+            <div class="card-body mx-auto">
                 <div "table-responsive-md">
                     
                     <table class="table">
