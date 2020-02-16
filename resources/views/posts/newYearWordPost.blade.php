@@ -64,8 +64,8 @@
                 </table>
                 <table>
                     <tr>
-                        <td><h2 class="text-nowrap" style="margin-top: 150px; height: 170px;">{{ $newYerWordPost->author}}</h2></td>
-                        <td><h2 class="text-nowrap" style="height: 40px margin-top: 10px">{{$newYeWordPost->date}}</h2></td>
+                        <td><h2 class="text-nowrap" style="margin-top: 150px; height: 170px;">{{ $newYearWordPost->author}}</h2></td>
+                        <td><h2 class="text-nowrap" style="height: 40px margin-top: 10px">{{$newYearWordPost->date}}</h2></td>
                         <td><h2 class="text-nowrap text-combine" style="height: 35px; margin-top: 0px">{{$newYearWordPost->year}}</h2></td>
                     </tr>
                 </table>
