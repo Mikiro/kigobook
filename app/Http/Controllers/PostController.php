@@ -24,7 +24,7 @@ class PostController extends Controller
     public function kigobook()
     {
         
-        $posts = Post::all();
+        $posts = Post::orderBy('id', 'asc')->get();
         return view('posts.kigobook')->with('posts',$posts);
                                   
     }

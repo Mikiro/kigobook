@@ -10,10 +10,12 @@
                 <div "table-responsive-md">
                     
                     <table class="table">
-                       @foreach ($newYearWords->chunk(8) as $chunk)
+                       @foreach ($newYearWords->chunk(15) as $chunk)
                         <div class="row">
                                @foreach($chunk as $newYearWord) 
-                                <a href="{{ route('posts.newYearWordPost', $newYearWord) }}" class="btn btn-primary">{{ $newYearWord->name }}</a>
+                             <div class="m-2">
+                                <a class="btn btn-info" href="{{ route('posts.newYearWordPost', $newYearWord) }}" role="button">{{ $newYearWord->name }}</a>
+                             </div>
                                @endforeach
                          </div> 
                         
