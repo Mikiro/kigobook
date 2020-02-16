@@ -29,12 +29,21 @@
           display: block;
      }
      
-     .vertical h2 h3 {
+     .vertical h2 {
          font-size: 24px;
          font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          line-height: 1.3;
 
      }
+     
+     .vertical h3 {
+         font-size: 24px;
+         font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         line-height: 1.3;
+
+     }
+     
+     
      
      .text-combine{
         text-combine-upright: all;
@@ -47,12 +56,12 @@
 
     <div class="vertical mw-100 overflow-auto mx-auto">
            
-                <div class="row">
+                <div class="row" style="margin-right: 100px;">
                     @foreach($posts as $post)
                     <div class="border-left" style="height: 500px; margin-right: 30px;">
                         <table>
                             <tr>
-                                <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 200px;">{{$post->word->name}}</h3></td>
+                                <td class="text-nowrap"><h class="mt-0 mb-0" style="height: 200px;">{{$post->word->name}}</h></td>
                             </tr>
                             <tr>
                                 <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 350px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2></td>
