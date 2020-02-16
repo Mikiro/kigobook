@@ -29,7 +29,7 @@
           display: block;
      }
      
-     .vertical h2 {
+     .vertical h2 h3 {
          font-size: 24px;
          font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          line-height: 1.3;
