@@ -37,7 +37,7 @@
      }
      
      .vertical h3 {
-         font-size: 24px;
+         font-size: 20px;
          font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          line-height: 1.3;
      }
@@ -51,25 +51,29 @@
     </style>
     
     <div class="vertical mw-100 overflow-auto mx-auto">
-        <div class="row">
+        <div class="row" style="margin-right: 15px;">
         @foreach($winterWordPosts as $winterWordPost)
-            <div class="border-left" style="height: 500px; margin-right: 30px;">
+            <div class="border-left" style="height: 500px; margin-right: 15px;">
                 <table>
                     <tr>
-                        <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 200px;">{{$winterWordPost->word->name}}</h3></td>
+                        <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 80px;">{{$winterWordPost->word->name}}</h3></td>
                     </tr>
                     <tr>
-                        <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 350px;">{{ $winterWordPost->content_upper}}{{ $winterWordPost->content_middle}}{{ $winterWordPost->content_bottom}}</h2></td>
+                        <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 430px;">{{ $winterWordPost->content_upper}}{{ $winterWordPost->content_middle}}{{ $winterWordPost->content_bottom}}</h2></td>
                     </tr>
+                </table>
+                <table>
                     <tr>
-                        <td><h2 class="text-nowrap" style="margin-top: 150px; height: 130px;">{{ $winterWordPost->author}}</h2></td>
-                        <td><h2 class="text-nowrap" style="height: 30px margin-top: 5px">{{$winterWordPost->date}}</h2></td>
-                        <td><h2 class="text-nowrap text-combine" style="height: 15px; margin-top: 0px">{{$winterWordPost->year}}</h2></td>
+                        <td><h2 class="text-nowrap" style="margin-top: 150px; height: 170px;">{{ $winterWordPost->author}}</h2></td>
+                        <td><h2 class="text-nowrap" style="height: 40px margin-top: 10px">{{$winterWordPost->date}}</h2></td>
+                        <td><h2 class="text-nowrap text-combine" style="height: 35px; margin-top: 0px">{{$winterWordPost->year}}</h2></td>
                     </tr>
                 </table>
             </div>
         @endforeach
         </div>
     </div>
- 
+    
 @endsection
+
+

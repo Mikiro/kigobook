@@ -37,7 +37,7 @@
      }
      
      .vertical h3 {
-         font-size: 24px;
+         font-size: 20px;
          font-size: calc(2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          line-height: 1.3;
      }
@@ -55,10 +55,10 @@
            
                 <div class="row" style="margin-right: 15px;">
                     @foreach($posts as $post)
-                    <div class="border-left" style="height: 500px; margin-right: 30px;">
+                    <div class="border-left" style="height: 500px; margin-right: 15px;">
                         <table>
                             <tr>
-                                <td class="text-nowrap"><h class="mt-0 mb-0" style="height: 80px;">{{$post->word->name}}</h></td>
+                                <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 80px;">{{$post->word->name}}</h3></td>
                             </tr>
                             <tr>
                                 <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 430px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h2></td>
