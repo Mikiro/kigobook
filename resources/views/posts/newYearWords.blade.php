@@ -14,7 +14,7 @@
                         <div class="row">
                                @foreach($chunk as $newYearWord) 
                              <div class="m-2">
-                                <a class="btn btn-info" href="{{ route('posts.newYearWordPost', $newYearWord) }}" role="button">{{ $newYearWord->name }}</a>
+                                <a class="btn btn-danger" href="{{ route('posts.newYearWordPost', $newYearWord) }}" role="button">{{ $newYearWord->name }}</a>
                              </div>
                                @endforeach
                          </div> 
