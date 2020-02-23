@@ -25,32 +25,7 @@
                 </div>
             </li>
           </ul>        
-            <ul class="nav navbar-nav navbar-right">
-                 <li class="">
-                    <!-- Authentication Links -->
-                    @guest
-                        <li><a href="{{ route('login') }}">ログイン</a></li>
-                        <li><a href="{{ route('register') }}">登録</a></li>
-                    @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle text-secondary" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
-                            {{ Auth::user()->name }} 
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <a href="{{ route('logout') }}"onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
-                                    ログアウト
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
-                    @endguest
-                </li>
-            </ul>
+        
         </div>
     </nav>
 </header>
