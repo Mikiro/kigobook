@@ -53,7 +53,7 @@
     </style>
     
     <div class="vertical mw-100 overflow-auto mx-auto">
-        <div>{{$data->count()}}句見つかりました。</div>
+        <div><span class="text-combine">{{$data->count()}}</span>句見つかりました。</div>
         <div class="row" style="margin-right: 15px;">
            @foreach($data as $post)
             <div class="border-left" style="height: 500px; margin-right: 15px;">
