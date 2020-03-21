@@ -123,7 +123,10 @@ class PostController extends Controller
     public function SummerWordPost(){
         // $words  = Word::pluck('name', 'id');
         
-	    $summerWordPosts = Post::where('word_id', request('id'))->get(); 
+	    $summerWordPosts = Word::whereHas('posts', function ($query){
+	        $query->where('word_id', request('id'));
+	    })->get(); 
+	   
         return view('posts.summerWordPost')->with('summerWordPosts',$summerWordPosts);
     }
     

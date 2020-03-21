@@ -56,19 +56,21 @@
             <div class="border-left" style="height: 500px; margin-right: 30px;">
                 <table>
                     <tr>
-                        <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 80px;">{{$summerWordPost->word->name}}</h3></td>
+                        <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 80px;">{{$summerWordPost->name}}</h3></td>
                     </tr>
+                    @foreach($summerWordPost->posts as $post )
                     <tr>
-                        <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 430px;">{{ $summerWordPost->content_upper}}{{ $summerWordPost->content_middle}}{{ $summerWordPost->content_bottom}}</h2></td>
+                        <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 430px;">{{ $post->content_upper}}{{ $post->content_middle}}{{ $post->content_bottom}}</h2></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><h2 class="text-nowrap" style="margin-top: 150px; height: 170px;">{{ $summerWordPost->author}}</h2></td>
-                        <td><h2 class="text-nowrap" style="height: 40px margin-top: 10px">{{$summerWordPost->date}}</h2></td>
-                        <td><h2 class="text-nowrap text-combine" style="height: 35px; margin-top: 0px">{{$summerWordPost->year}}</h2></td>
+                        <td><h2 class="text-nowrap" style="margin-top: 150px; height: 170px;">{{ $post->author}}</h2></td>
+                        <td><h2 class="text-nowrap" style="height: 40px margin-top: 10px">{{$post->date}}</h2></td>
+                        <td><h2 class="text-nowrap text-combine" style="height: 35px; margin-top: 0px">{{$post->year}}</h2></td>
                     </tr>
                 </table>
+                    @endforeach
             </div>
         @endforeach
         </div>
