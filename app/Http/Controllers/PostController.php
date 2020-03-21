@@ -23,9 +23,10 @@ class PostController extends Controller
     
     public function kigobook()
     {
+    
+        $words = Word::with('posts')->get();
         
-        $posts = Post::orderBy('id', 'asc')->get();
-        return view('posts.kigobook')->with('posts',$posts);
+        return view('posts.kigobook')->with('words',$words);
                                   
     }
     
@@ -175,7 +176,9 @@ class PostController extends Controller
     
     
     public function search(){
-        return view('posts.search');
+        $query = Post::query();
+        $data = $query->get();
+        return view('posts.search',compact('data'));
     }
     
     public function result(Request $request)
@@ -236,8 +239,13 @@ class PostController extends Controller
             $query->where('content_bottom', 'like', '%'.$content_bottom.'%');
         }
         $data = $query->get();
+        if(count($data) <= 0){
+            return view('posts.search',compact('data'));
+        }
         $post = DB::table('posts')->count();
         return view('posts.result', compact('data', 'category', 'word', 'author', 'content_upper', 'content_middle','content_bottom'));
+        
+        
     }
 }
 

@@ -5,6 +5,7 @@
 <div class="card">
     <div class="card-header text-center">検索</-div>
         <div class="card-body">
+        <div><span class="text-combine">{{$data->count()}}</span>句見つかりました。</div>
         <div class="col-md-12"> 
             {!! Form::open(['route' => 'posts.result','method' => 'post']) !!}
                 {{ csrf_field() }}

@@ -27,7 +27,7 @@ class PostController extends AdminController
      */
     protected function grid()
     {
-        $categories = Category::pluck('name', 'id');
+        
         $grid = new Grid(new Post);
 
         $grid->column('id', __('Id'));
@@ -39,6 +39,8 @@ class PostController extends AdminController
         $grid->column('year', __('年度'));
         $grid->category()->name('季節'); 
         $grid->word()->name('季語');
+        
+        
         // $grid->column('created_at', __('Created at'));
         // $grid->column('updated_at', __('Updated at'));
         
@@ -64,7 +66,7 @@ class PostController extends AdminController
      */
     protected function detail($id)
     {
-        $categories = Category::pluck('id', 'name');
+       
         $show = new Show(Post::findOrFail($id));
 
         $show->field('id', __('Id'));
@@ -92,6 +94,7 @@ class PostController extends AdminController
     {
         $categories = Category::pluck('name', 'id');
         $words  = Word::pluck('name', 'id');
+       
         
         $form = new Form(new Post);
 
@@ -103,7 +106,7 @@ class PostController extends AdminController
         $form->textarea('year', __('Year'));
         $form->select('category_id', 'Category')->options($categories);
         $form->select('word_id', 'Word')->options($words);
-       
+        
         return $form;
     }
 }

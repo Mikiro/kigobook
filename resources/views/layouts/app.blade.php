@@ -19,6 +19,7 @@
     <!--<div id="app">-->
         @include('common.navbar')
         @yield('content')
+        @include('common.footbar')
     <!--</div>-->
 
     <!-- Scripts -->
