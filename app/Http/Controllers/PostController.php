@@ -140,7 +140,9 @@ class PostController extends Controller
     public function fallWordPost()
     {
         
-	$fallWordPosts = Post::where('word_id', request('id'))->get(); 
+	$fallWordPosts = Word::whereHas('posts', function ($query){
+	    $query->where('word_id', request('id'));
+	 })->get(); 
 
 	return view('posts.fallWordPost')->with('fallWordPosts',$fallWordPosts);
     }
