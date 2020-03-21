@@ -23,11 +23,8 @@ class PostController extends Controller
     
     public function kigobook()
     {
-    
         $words = Word::with('posts')->get();
-        
         return view('posts.kigobook')->with('words',$words);
-                                  
     }
     
     public function create()
@@ -108,7 +105,9 @@ class PostController extends Controller
     
     public function SpringWordPost(){
         
-        $springWordPosts = Post::where('word_id', request('id'))->get(); 
+        $springWordPosts = Word::whereHas('posts', function ($query) {
+            $query->where('word_id', request('id'));
+        })->get();
         //::where('word_id' ,'1')->get();
         
         return view('posts.springWordPost')->with('springWordPosts',$springWordPosts);
