@@ -56,19 +56,21 @@
             <div class="border-left" style="height: 500px; margin-right: 15px;">
                 <table>
                     <tr>
-                        <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 80px;">{{$winterWordPost->word->name}}</h3></td>
+                        <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 80px;">{{$winterWordPost->name}}</h3></td>
                     </tr>
+                    @foreach($winterWordPost->posts as $post )
                     <tr>
-                        <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 430px;">{{ $winterWordPost->content_upper}}{{ $winterWordPost->content_middle}}{{ $winterWordPost->content_bottom}}</h2></td>
+                        <td class="text-nowrap"><h2 class="mt-0 mb-0" style="height: 430px;">{{ $post->content_upper}}{{ $post->content_middle}}{{ $post->content_bottom}}</h2></td>
                     </tr>
                 </table>
                 <table>
                     <tr>
-                        <td><h2 class="text-nowrap" style="margin-top: 150px; height: 170px;">{{ $winterWordPost->author}}</h2></td>
-                        <td><h2 class="text-nowrap" style="height: 40px margin-top: 10px">{{$winterWordPost->date}}</h2></td>
-                        <td><h2 class="text-nowrap text-combine" style="height: 35px; margin-top: 0px">{{$winterWordPost->year}}</h2></td>
+                        <td><h2 class="text-nowrap" style="margin-top: 150px; height: 170px;">{{ $post->author}}</h2></td>
+                        <td><h2 class="text-nowrap" style="height: 40px margin-top: 10px">{{$post->date}}</h2></td>
+                        <td><h2 class="text-nowrap text-combine" style="height: 35px; margin-top: 0px">{{$post->year}}</h2></td>
                     </tr>
                 </table>
+                    @endforeach
             </div>
         @endforeach
         </div>

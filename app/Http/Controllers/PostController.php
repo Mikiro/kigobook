@@ -157,7 +157,9 @@ class PostController extends Controller
     public function winterWordPost()
     {
         
-	$winterWordPosts = Post::where('word_id', request('id'))->get(); 
+	$winterWordPosts = Word::whereHas('posts', function ($query){
+	    $query->where('word_id', request('id'));
+	})->get(); 
 
 	return view('posts.winterWordPost')->with('winterWordPosts',$winterWordPosts);
     }
