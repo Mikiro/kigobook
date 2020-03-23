@@ -174,7 +174,9 @@ class PostController extends Controller
     public function newYearWordPost()
     {
         
-	$newYearWordPosts = Post::where('word_id', request('id'))->get(); 
+	$newYearWordPosts = Word::whereHas('posts', function ($query){
+	    $query->where('word_id', request('id'));
+	})->get(); 
 
 	return view('posts.newYearWordPost')->with('newYearWordPosts',$newYearWordPosts);
     }
