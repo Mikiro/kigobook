@@ -4,6 +4,19 @@
 
         <div class="container">
           <div class="">
+            
+            <a href="/posts/search" class="card text-white bg-dark mb-3 mt-3" style="text-decoration: none;">
+              <div class="card-body">
+                <h1 class="text-center"><i class="fas fa-search-plus"></i> 検索する</h1>
+              </div>
+            </a>
+            
+            <a href="posts/kigobook" class="card text-white bg-info mb-3 mt-3" style="text-decoration: none;">
+              <div class="card-body">
+                <h1 class="text-center"><i class="fas fa-book-open"></i> 歳時記を読む</h1>
+              </div>
+            </a>
+            
             <a href="posts/springWords" class="card text-white bg-warning mb-3 mt-3" style="text-decoration: none;">
               <div class="card-body">
                 <h1 class="text-center"><i class="fas fa-frog"></i>   春の季語</h1>
@@ -34,17 +47,7 @@
               </div>
             </a>
             
-            <a href="posts/kigobook" class="card text-white bg-info mb-3 mt-3" style="text-decoration: none;">
-              <div class="card-body">
-                <h1 class="text-center"><i class="fas fa-book-open"></i> 俳句集を詠む</h1>
-              </div>
-            </a>
             
-            <a href="/posts/search" class="card text-white bg-dark mb-3 mt-3" style="text-decoration: none;">
-              <div class="card-body">
-                <h1 class="text-center"><i class="fas fa-search-plus"></i> 検索する</h1>
-              </div>
-            </a>
             </div>
         </div>
       

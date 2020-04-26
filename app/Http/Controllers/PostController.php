@@ -202,6 +202,7 @@ class PostController extends Controller
         $query = Post::query();
         
         
+      
         
         // 検索するテキストが入力されている場合のみ
         if (!empty($q)) {
@@ -250,7 +251,10 @@ class PostController extends Controller
         if(count($data) <= 0){
             return view('posts.search',compact('data'));
         }
-        $post = DB::table('posts')->count();
+        
+        
+        $data = $query->get();
+         $post = DB::table('posts')->count();
         return view('posts.result', compact('data', 'category', 'word', 'author', 'content_upper', 'content_middle','content_bottom'));
         
         
