@@ -51,7 +51,7 @@
   
     </style>
 
-    <div class="vertical mw-100 overflow-auto mx-auto">
+    <div class="vertical mw-100 overflow-auto mx-auto" style="height: 750px">
            
          <div class="row" style="margin-right: 15px;">
              
