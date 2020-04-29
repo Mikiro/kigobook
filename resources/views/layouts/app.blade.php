@@ -9,7 +9,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('テスト季語別俳句集', 'テスト季語別俳句集') }}</title>
+    <title>{{ config('季語別俳句集', '季語別俳句集') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
