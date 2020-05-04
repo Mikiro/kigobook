@@ -31,14 +31,14 @@
      
      .vertical h2 {
         
-         font-size: calc(3.0rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         font-size: calc(2.8rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          /*line-height: 1.3;*/
 
      }
      
      .vertical h3 {
        
-         font-size: calc(3.0rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         font-size: calc(2.8rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          /*line-height: 1.3;*/
      }
      
