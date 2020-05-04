@@ -30,16 +30,16 @@
      }
      
      .vertical h2 {
-         font-size: 26px;
-         font-size: calc(2.5rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
-         line-height: 1.3;
+        
+         font-size: calc(3.0rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         /*line-height: 1.3;*/
 
      }
      
      .vertical h3 {
-         font-size: 24px;
-         font-size: calc(2.5rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
-         line-height: 1.3;
+       
+         font-size: calc(3.0rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         /*line-height: 1.3;*/
      }
      
      .text-combine{
@@ -51,15 +51,15 @@
   
     </style>
 
-    <div class="vertical mw-100 overflow-auto mx-auto" style="height: 750px">
+    <div class="vertical mw-100 overflow-auto mx-auto" style="height: 850px">
            
          <div class="row" style="margin-right: 15px;">
              
             @foreach($words as $word)
-                <div class="border-left" style="height: 500px; margin-right: 15px;">
+                <div class="border-left" style="height: 850px; margin-right: 15px;">
                     <table>
                         <tr>
-                            <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 80px;">{{$word->name}}</h3></td>
+                            <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 180px; line-height: 2.0;">{{$word->name}}</h3></td>
                         </tr>
                          @foreach($word->posts as $post )
                         <table>
