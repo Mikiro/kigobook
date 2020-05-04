@@ -31,14 +31,14 @@
      
      .vertical h2 {
         
-         font-size: calc(2.8rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         font-size: calc(2.4rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          /*line-height: 1.3;*/
 
      }
      
      .vertical h3 {
        
-         font-size: calc(2.8rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         font-size: calc(2.4rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          /*line-height: 1.3;*/
      }
      
@@ -50,7 +50,7 @@
     
   
     </style>
-
+<div class="panel panel-default">
     <div class="vertical mw-100 overflow-auto mx-auto">
            
          <div class="row" style="margin-right: 15px;">
@@ -81,7 +81,7 @@
         </div>
         
     </div>
- 
+ </div>
 @endsection
 
 
