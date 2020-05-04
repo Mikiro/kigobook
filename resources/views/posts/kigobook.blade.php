@@ -50,9 +50,9 @@
     
   
     </style>
-<div class="panel panel-default">
+
     <div class="vertical mw-100 overflow-auto mx-auto">
-           
+           <div class="panel panel-default">
          <div class="row" style="margin-right: 15px;">
              
             @foreach($words as $word)
@@ -79,9 +79,9 @@
                 </div>
             @endforeach
         </div>
-        
+        </div>
     </div>
- </div>
+ 
 @endsection
 
 
