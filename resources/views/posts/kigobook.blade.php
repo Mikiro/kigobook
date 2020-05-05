@@ -54,10 +54,10 @@
 
     <div class="vertical mw-100 overflow-auto panel panel-default mx-auto d-md-flex">
      
-         <div class="row" style="margin-right: 15px; height:580px;">
+         <div class="row" style="margin-right: 15px; height:620px;">
              
             @foreach($words as $word)
-                <div class="border-left" style="height: 580px; margin-right: 15px;">
+                <div class="border-left" style="height: 620px; margin-right: 15px;">
                     <table>
                         <tr>
                             <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 180px; line-height: 2.0;">{{$word->name}}</h3></td>
