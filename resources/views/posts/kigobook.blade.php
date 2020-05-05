@@ -31,14 +31,14 @@
      
      .vertical h2 {
         
-         font-size: calc(2.4rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         font-size: calc(2.2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          /*line-height: 1.3;*/
 
      }
      
      .vertical h3 {
        
-         font-size: calc(2.4rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         font-size: calc(2.2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          /*line-height: 1.3;*/
      }
      
@@ -50,13 +50,14 @@
     
   
     </style>
+    
 
-    <div class="vertical mw-100 overflow-auto mx-auto">
-           <div class="panel panel-default">
-         <div class="row" style="margin-right: 15px;">
+    <div class="vertical mw-100 overflow-auto panel panel-default mx-auto d-md-flex">
+     
+         <div class="row" style="margin-right: 15px; height:550px;">
              
             @foreach($words as $word)
-                <div class="border-left" style="height: 700px; margin-right: 15px;">
+                <div class="border-left" style="height: 550px; margin-right: 15px;">
                     <table>
                         <tr>
                             <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 180px; line-height: 2.0;">{{$word->name}}</h3></td>
@@ -79,7 +80,7 @@
                 </div>
             @endforeach
         </div>
-        </div>
+        
     </div>
  
 @endsection
