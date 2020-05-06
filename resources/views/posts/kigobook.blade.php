@@ -40,6 +40,7 @@
        
          font-size: calc(2.2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
          /*line-height: 1.3;*/
+         font-weight: normal;
      }
      
      .text-combine{
@@ -60,7 +61,7 @@
                 <div class="" style="height: 620px; margin-right: 15px;">
                     <table class="table-hover">
                         <tr>
-                            <td class="text-nowrap"><h3 class="my-2 mx-3" style="height: 180px; line-height: 2.0;">{{$word->name}}</h3></td>
+                            <td class="text-nowrap"><h2 class="my-2 mx-3" style="height: 180px; line-height: 2.0;">{{$word->name}}</h3></td>
                         </tr>
                          @foreach($word->posts as $post )
                          
@@ -71,9 +72,9 @@
                         </table>
                         <table class="table-hover border-left">
                             <tr>
-                                <td class="pb-4"><h2 class="text-nowrap mx-3" style="margin-top: 140px; height: 270px;">{{ $post->author}}</h2></td>
-                                <td class="pt-4"><h2 class="text-nowrap mx-3" style="height: 40px margin-top: 60px">{{$post->date}}</h2></td>
-                                <td><h2 class="text-nowrap text-combine mx-3" style="height: 35px; margin-top: 0px">{{$post->year}}</h2></td>
+                                <td class=""><h3 class="text-nowrap mx-3" style="margin-top: 170px; height: 250px;">{{ $post->author}}</h2></td>
+                                <td class=""><h3 class="text-nowrap mx-3" style="height: 40px margin-top: 60px">{{$post->date}}</h2></td>
+                                <td><h3 class="text-nowrap text-combine mx-3" style="height: 55px; margin-top: 0px">{{$post->year}}</h2></td>
                             </tr>
                         </table>
                        
