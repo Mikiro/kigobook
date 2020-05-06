@@ -57,24 +57,26 @@
          <div class="row" style="margin-right: 15px; height:620px;">
              
             @foreach($words as $word)
-                <div class="border-left" style="height: 620px; margin-right: 15px;">
-                    <table>
+                <div class="" style="height: 620px; margin-right: 15px;">
+                    <table class="table-hover">
                         <tr>
-                            <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 180px; line-height: 2.0;">{{$word->name}}</h3></td>
+                            <td class="text-nowrap"><h3 class="my-2 mx-3" style="height: 180px; line-height: 2.0;">{{$word->name}}</h3></td>
                         </tr>
                          @foreach($word->posts as $post )
-                        <table>
+                         
+                        <table class="table-hover">
                             <tr>
-                                <td class="text-nowrap"><h3 class="mt-0 mb-0" style="height: 80px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h3></td>
+                                <td class="text-nowrap"><h3 class="my-2 ml-4" style="height: 600px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h3></td>
                             </tr>
                         </table>
-                        <table>
+                        <table class="table-hover border-left">
                             <tr>
-                                <td><h2 class="text-nowrap" style="margin-top: 150px; height: 170px;">{{ $post->author}}</h2></td>
-                                <td><h2 class="text-nowrap" style="height: 40px margin-top: 10px">{{$post->date}}</h2></td>
-                                <td><h2 class="text-nowrap text-combine" style="height: 35px; margin-top: 0px">{{$post->year}}</h2></td>
+                                <td class="pb-4"><h2 class="text-nowrap mx-3" style="margin-top: 140px; height: 270px;">{{ $post->author}}</h2></td>
+                                <td class="pt-4"><h2 class="text-nowrap mx-3" style="height: 40px margin-top: 60px">{{$post->date}}</h2></td>
+                                <td><h2 class="text-nowrap text-combine mx-3" style="height: 35px; margin-top: 0px">{{$post->year}}</h2></td>
                             </tr>
                         </table>
+                       
                          @endforeach
                     </table>
                 </div>
