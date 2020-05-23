@@ -29,19 +29,18 @@
           display: block;
      }
      
-     .vertical h2 {
-        
-         font-size: calc(2.2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
-         /*line-height: 1.3;*/
-
-     }
      
-     .vertical h3 {
+     .vertical td {
        
-         font-size: calc(2.2rem + ((1vw - 0.64rem) * 0.7143));/* 20px~24pxで可変*/
+         font-size: calc(2.0rem + ((1vw - 0.94rem) * 0.9143));/* 20px~24pxで可変*/
          /*line-height: 1.3;*/
          font-weight: normal;
      }
+     
+     
+       
+    /*font-size: calc(2.2rem + ((1vw - 0.64rem) * 0.7143));*/
+        
      
      .text-combine{
         text-combine-upright: all;
@@ -49,32 +48,36 @@
         -ms-text-combine-horizontal: all;
     }
     
+    @media screen and (max-height: 568px) {
+   /* 縦幅が568px以下の場合に適用するスタイル */
+       .row{height:400px!important;}
+    }
   
     </style>
     
 
-    <div class="vertical mw-100 overflow-auto panel panel-default mx-auto d-md-flex">
+    <div class="vertical mw-100 overflow-auto panel panel-default mx-auto">
      
-         <div class="row" style="margin-right: 15px; height:620px;">
+         <div class="row" style="margin-right: 15px; height:630px;">
              
             @foreach($words as $word)
-                <div class="" style="height: 620px; margin-right: 15px;">
+                <div class="" style=" margin-right: 15px;">
                     <table class="table-hover">
                         <tr>
-                            <td class="text-nowrap"><h2 class="my-2 mx-3" style="height: 180px; line-height: 2.0;">{{$word->name}}</h3></td>
+                            <td class="text-nowrap my-2 mx-3" style="height: 100%; line-height: 2.0;">{{$word->name}}</td>
                         </tr>
                          @foreach($word->posts as $post )
                          
                         <table class="table-hover">
                             <tr>
-                                <td class="text-nowrap"><h3 class="my-2 ml-4" style="height: 600px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</h3></td>
+                                <td class="text-nowrap" height="620">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>
                             </tr>
                         </table>
                         <table class="table-hover border-left">
                             <tr>
-                                <td class=""><h3 class="text-nowrap mx-3" style="margin-top: 170px; height: 250px;">{{ $post->author}}</h2></td>
-                                <td class=""><h3 class="text-nowrap mx-3" style="height: 40px margin-top: 60px">{{$post->date}}</h2></td>
-                                <td><h3 class="text-nowrap text-combine mx-3" style="height: 55px; margin-top: 0px">{{$post->year}}</h2></td>
+                                <td height="277"></td>
+                                <td height="277"class="text-nowrap">{{ $post->author}}</td>
+                                <td height="66" class="text-nowrap">{{$post->date}} <span class="text-combine">{{$post->year}}</span></td>
                             </tr>
                         </table>
                        
