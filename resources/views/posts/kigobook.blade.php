@@ -32,7 +32,7 @@
      
      .vertical td {
        
-         font-size: calc(2.0rem + ((1vw - 0.94rem) * 0.9143));/* 20px~24pxで可変*/
+         font-size: calc(2.0rem + ((1vw - 0.64rem) * 0.9143));/* 20px~24pxで可変*/
          /*line-height: 1.3;*/
          font-weight: normal;
      }
@@ -52,13 +52,15 @@
    /* 縦幅が568px以下の場合に適用するスタイル */
        .row{height:400px!important;}
     }
+    
+   
   
     </style>
     
 
     <div class="vertical mw-100 overflow-auto panel panel-default mx-auto">
      
-         <div class="row" style="margin-right: 15px; height:630px;">
+         <div class="row" style="margin-right: 15px; height:640px;">
              
             @foreach($words as $word)
                 <div class="" style=" margin-right: 15px;">
@@ -70,7 +72,7 @@
                          
                         <table class="table-hover">
                             <tr>
-                                <td class="text-nowrap" height="620">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>
+                                <td class="text-nowrap" height="630">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>
                             </tr>
                         </table>
                         <table class="table-hover border-left">
