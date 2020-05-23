@@ -66,7 +66,7 @@
                 <div class="" style=" margin-right: 15px;">
                     <table class="table-hover">
                         <tr>
-                            <td class="text-nowrap my-2 mx-3" style="height: 100%; line-height: 2.0;">{{$word->name}}</td>
+                            <td class="text-nowrap my-2 mx-3" style="height: 100%; line-height: 2.0; font-weight:800;">{{$word->name}}</td>
                         </tr>
                          @foreach($word->posts as $post )
                          
