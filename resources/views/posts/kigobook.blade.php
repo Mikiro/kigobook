@@ -48,17 +48,23 @@
         -ms-text-combine-horizontal: all;
     }
     
+     @media screen and (max-height: 823px) {
+   /* 縦幅が823px以下の場合に適用するスタイル */
+       .row{height:500px!important;}
+    }
+    
     @media screen and (max-height: 568px) {
    /* 縦幅が568px以下の場合に適用するスタイル */
        .row{height:400px!important;}
     }
     
    
+   
   
     </style>
     
 
-    <div class="vertical mw-100 overflow-auto panel panel-default mx-auto">
+    <div class="vertical mw-100 overflow-auto panel panel-default panel-warning mx-auto">
      
          <div class="row" style="height:640px;">
              
