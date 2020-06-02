@@ -28,7 +28,7 @@ class CategoryController extends AdminController
     {
         $grid = new Grid(new Category);
 
-        $grid->column('id', __('Id'));
+        $grid->column('id', __('Id'))->sortable();
         $grid->column('name', __('季節 分類'));
         // $grid->column('created_at', __('Created at'));
         // $grid->column('updated_at', __('Updated at'));

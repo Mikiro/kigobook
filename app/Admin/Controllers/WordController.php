@@ -28,7 +28,7 @@ class WordController extends AdminController
     {
         $grid = new Grid(new Word);
 
-        $grid->column('id', __('Id'));
+        $grid->column('id', __('Id'))->sortable();
         $grid->category()->name('季節'); 
         $grid->column('name', __('季語'));
         $grid->column('created_at', __('Created at'));

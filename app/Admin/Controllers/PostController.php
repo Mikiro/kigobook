@@ -30,7 +30,7 @@ class PostController extends AdminController
         
         $grid = new Grid(new Post);
 
-        $grid->column('id', __('Id'));
+        $grid->column('id', __('Id'))->sortable();
         $grid->column('content_upper', __('上句'));
         $grid->column('content_middle', __('中句'));
         $grid->column('content_bottom', __('下句'));
