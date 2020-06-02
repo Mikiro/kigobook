@@ -254,6 +254,8 @@ class PostController extends Controller
         
         
         $data = $query->get();
+        // $words = $data->where('word_id', request('id'))->get();
+        // $data = $query->get();
          $post = DB::table('posts')->count();
         return view('posts.result', compact('data', 'category', 'word', 'author', 'content_upper', 'content_middle','content_bottom'));
         
