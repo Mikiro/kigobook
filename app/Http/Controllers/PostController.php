@@ -108,6 +108,8 @@ class PostController extends Controller
         $springWordPosts = Word::whereHas('posts', function ($query) {
             $query->where('word_id', request('id'));
         })->get();
+        
+    
         //::where('word_id' ,'1')->get();
         
         return view('posts.springWordPost')->with('springWordPosts',$springWordPosts);
