@@ -11,9 +11,13 @@
 |
 */
 
+    
+
+
 Route::get('/', 'PostController@index');
 
-    
+
+
 Route::get('/home', 'PostController@index')->name('home');
 
 Route::get('posts/springWords', 'PostController@SpringWords')->name('posts.springWords');
@@ -35,8 +39,14 @@ Route::get('posts/search', 'PostController@search')->name('posts.search');
 Route::get('posts/result', 'PostController@result')->name('posts.result');
 Route::post('posts/result', 'PostController@result')->name('posts.result');
 Route::get('posts/kigobook', 'PostController@kigobook')->name('posts.kigobook');
-    
-Route::resource('posts', PostController::class);
-    
+
+
+    // Route::resource('posts', PostController::class);
+
+// Route::fallback(function() {
+//     return 'Hm, why did you land here somehow?';
+// });
+   
+
 
 

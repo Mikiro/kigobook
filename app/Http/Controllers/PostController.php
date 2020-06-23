@@ -10,10 +10,17 @@ use App\Word;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB; 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+
 
 
 class PostController extends Controller
 {
+    
+   
+
+    
+    
     public function index()
     {
         
@@ -106,11 +113,15 @@ class PostController extends Controller
     public function SpringWordPost(){
         
         $springWordPosts = Word::whereHas('posts', function ($query) {
-            $query->where('word_id', request('id'));
+            $query->where('word_id',  request('id'));
+            
         })->get();
         
+    if($springWordPosts->isEmpty()) {
+        abort('404');
+    }
     
-        //::where('word_id' ,'1')->get();
+    //ずっとnullを使っていた isEmpty()で勝利！
         
         return view('posts.springWordPost')->with('springWordPosts',$springWordPosts);
     }
@@ -128,6 +139,10 @@ class PostController extends Controller
 	    $summerWordPosts = Word::whereHas('posts', function ($query){
 	        $query->where('word_id', request('id'));
 	    })->get(); 
+	    
+	    if($summerWordPosts->isEmpty()) {
+        abort('404');
+    }
 	   
         return view('posts.summerWordPost')->with('summerWordPosts',$summerWordPosts);
     }
@@ -145,6 +160,10 @@ class PostController extends Controller
 	$fallWordPosts = Word::whereHas('posts', function ($query){
 	    $query->where('word_id', request('id'));
 	 })->get(); 
+	 
+	  if($fallWordPosts->isEmpty()) {
+        abort('404');
+    }
 
 	return view('posts.fallWordPost')->with('fallWordPosts',$fallWordPosts);
     }
@@ -162,6 +181,10 @@ class PostController extends Controller
 	$winterWordPosts = Word::whereHas('posts', function ($query){
 	    $query->where('word_id', request('id'));
 	})->get(); 
+	
+	if($winterWordPosts->isEmpty()) {
+        abort('404');
+    }
 
 	return view('posts.winterWordPost')->with('winterWordPosts',$winterWordPosts);
     }
@@ -179,6 +202,10 @@ class PostController extends Controller
 	$newYearWordPosts = Word::whereHas('posts', function ($query){
 	    $query->where('word_id', request('id'));
 	})->get(); 
+	
+		if($newYearWordPosts->isEmpty()) {
+        abort('404');
+    }
 
 	return view('posts.newYearWordPost')->with('newYearWordPosts',$newYearWordPosts);
     }
