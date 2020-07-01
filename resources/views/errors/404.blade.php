@@ -1,5 +1,5 @@
 @extends('errors.layouts.base')
-
+@extends('layouts.app')
 @section('title', '404 Not Found')
 
 @section('message', 'The page of the corresponding address could not be found.')

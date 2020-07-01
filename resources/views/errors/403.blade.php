@@ -1,5 +1,5 @@
 @extends('errors.layouts.base')
-
+@extends('layouts.app')
 @section('title', '403 Forbidden')
 
 @section('message', 'You do not have access.')

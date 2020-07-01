@@ -1,5 +1,5 @@
 @extends('errors.layouts.base')
-
+@extends('layouts.app')
 @section('title', '500 Internal Server Error')
 {{-- サーバ内部エラー --}}
 

@@ -1,5 +1,5 @@
 @extends('errors.layouts.base')
-
+@extends('layouts.app')
 @section('title', '503 Service Unavailable')
 {{-- サービス利用不可 --}}
 

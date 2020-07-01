@@ -1,5 +1,5 @@
 @extends('errors.layouts.base')
-
+@extends('layouts.app')
 @section('title', '401 Unauthorized')
 
 @section('message', 'certification failed.')
