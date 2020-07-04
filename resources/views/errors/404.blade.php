@@ -10,4 +10,5 @@
 
 @section('link')
   <p><a href="/">to TOP&gt;&gt;</a></p>
+  <img class="logo" src="{{ asset('image/814.1.JPG') }}" alt="logo">
 @endsection
