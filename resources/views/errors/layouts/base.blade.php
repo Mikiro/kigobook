@@ -18,6 +18,16 @@
     h1 { font-size: 18px; }
     p { margin-left: 10px; font-size: 12px; }
   </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172655737-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172655737-1');
+</script>
+
 </head>
 <body>
 <div class="error-wrap">
