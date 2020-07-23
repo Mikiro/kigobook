@@ -3,7 +3,22 @@
 @section('content')
 
         <div class="container">
-          <div class="">
+          
+          
+          <style type="text/css">
+            .container {
+            background-image: url(image/book.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            height: 768px;
+            width: 1024px;
+          }
+          </style>
+          
+            
+          <div class="card" style="width: 30%" >
             
             <a href="/posts/search" class="card text-white bg-dark mb-3 mt-3" style="text-decoration: none;">
               <div class="card-body">
@@ -46,10 +61,11 @@
                 <h1 class="text-center"><i class="fas fa-kiwi-bird"></i> 新年の季語</h1>
               </div>
             </a>
-            
+           
             
             </div>
-        </div>
+             </div>
+        
       
     
 @endsection
