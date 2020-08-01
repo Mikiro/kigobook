@@ -57,11 +57,13 @@
       @media screen and (max-height: 823px) {
    /* 縦幅が823px以下の場合に適用するスタイル */
        .row{height:500px!important;}
+       .image-book{height:500px!important;}
     }
     
     @media screen and (max-height: 568px) {
    /* 縦幅が568px以下の場合に適用するスタイル */
        .row{height:400px!important;}
+       .image-book{height:400px!important;}
     }
     
     </style>
