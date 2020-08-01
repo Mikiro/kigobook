@@ -71,9 +71,9 @@
         <div class="container">
           <div class="row">
               <div class="image-book vertical img-fluid" alt="">
-                  <table class="table table-responsive">
+                  <table border="1" class="table table-responsive">
                       <tr>
-                          <td>季語別俳句集</td>
+                          <td><p>季語別俳句集</p></td>
                       </tr>
                       <tr>
                           <td class="">
