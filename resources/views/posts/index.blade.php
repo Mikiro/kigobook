@@ -71,11 +71,8 @@
         <div class="container">
           <div class="row">
               <div class="image-book vertical img-fluid" alt="">
-                  <table border="1" class="table table-responsive">
-                      <tr>
-                          <td><p>季語別俳句集</p></td>
-                      </tr>
-                      <tr>
+                  <p class="display-4">季語別俳句集</p>
+                  <table border="0" class="table table-responsive">
                           <td class="">
                               <a href="/posts/search" class="text-white bg-dark mb-3 mt-3" style="text-decoration: none;">
                               検索する</a>      
