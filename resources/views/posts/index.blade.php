@@ -54,7 +54,7 @@
         -ms-text-combine-horizontal: all;
     }
     
-      @media screen and (max-width: 823px) {
+      @media screen and (max-height: 823px) {
    /* 縦幅が823px以下の場合に適用するスタイル */
        .row{height:500px!important;}
     }
