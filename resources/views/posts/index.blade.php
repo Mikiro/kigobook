@@ -79,7 +79,7 @@
         <div class="container">
           <div class="image-book vertical img-fluid" alt="">
               <div class="row">
-                  <div class="container inner-box" style="margin-right:auto; margin-left:auto; width:600px;">
+                  <div class="inner-box">
                       <div class="" style="height: auto"><p class="display-4">季語別俳句集</p></div>
                       <table class="table table-responsive">
                           <tr>
