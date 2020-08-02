@@ -54,6 +54,11 @@
         -ms-text-combine-horizontal: all;
     }
     
+    .inner-box{
+        border-style:none!important;
+    }
+    
+    
       @media screen and (max-height: 823px) {
    /* 縦幅が823px以下の場合に適用するスタイル */
        .row{height:500px!important;}
@@ -66,57 +71,60 @@
        .image-book{height:400px!important;}
     }
     
+    
+    
     </style>
 
         <div class="container">
           <div class="row">
               <div class="image-book vertical img-fluid" alt="">
-                  <div class="" style="height: auto"><p class="display-4">季語別俳句集</p></div>
-                  <table class="table table-responsive">
-                      <tr>
-                          <td class="">
-                              <a href="/posts/search" class="text-white bg-dark mb-3 mt-3" style="text-decoration: none;">
-                              検索する</a>      
-                          </td>
-                      </tr>
-                      <tr>
-                          <td class="">
-                              <a href="posts/kigobook" class="text-white bg-info mb-3 mt-3" style="text-decoration: none;">
-                              歳時記を読む</a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td class="">
-                              <a href="posts/springWords" class="text-white bg-warning mb-3 mt-3" style="text-decoration: none;">
-                              春の季語</a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td class="">
-                              <a href="posts/summerWords" class="text-white bg-success mb-3 mt-3" style="text-decoration: none;">
-                             夏の季語</a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td class="">
-                              <a href="posts/fallWords" class="text-white bg-secondary mb-3 mt-3" style="text-decoration: none;">
-                              秋の季語</a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td class="">
-                              <a href="posts/winterWords" class="text-white bg-primary mb-3 mt-3" style="text-decoration: none;">
-                              冬の季語</a>
-                          </td>
-                      </tr>
-                      <tr>
-                          <td class="">
-                              <a href="/posts/newYearWords" class="text-white bg-danger mb-3 mt-3" style="text-decoration: none;">
-                              新年の季語</h1></a>
-                          </td>
-                      </tr>
-                  </table>
-           
+                  <div class="container inner-box">
+                      <div class="" style="height: auto"><p class="display-4">季語別俳句集</p></div>
+                      <table class="table table-responsive">
+                          <tr>
+                              <td class="">
+                                  <a href="/posts/search" class="text-white bg-dark mb-3 mt-3" style="text-decoration: none;">
+                                  検索する</a>      
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="">
+                                  <a href="posts/kigobook" class="text-white bg-info mb-3 mt-3" style="text-decoration: none;">
+                                  歳時記を読む</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="">
+                                  <a href="posts/springWords" class="text-white bg-warning mb-3 mt-3" style="text-decoration: none;">
+                                  春の季語</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="">
+                                  <a href="posts/summerWords" class="text-white bg-success mb-3 mt-3" style="text-decoration: none;">
+                                 夏の季語</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="">
+                                  <a href="posts/fallWords" class="text-white bg-secondary mb-3 mt-3" style="text-decoration: none;">
+                                  秋の季語</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="">
+                                  <a href="posts/winterWords" class="text-white bg-primary mb-3 mt-3" style="text-decoration: none;">
+                                  冬の季語</a>
+                              </td>
+                          </tr>
+                          <tr>
+                              <td class="">
+                                  <a href="/posts/newYearWords" class="text-white bg-danger mb-3 mt-3" style="text-decoration: none;">
+                                  新年の季語</h1></a>
+                              </td>
+                          </tr>
+                      </table>
+                    </div>
                </div>
             </div>
         </div>
