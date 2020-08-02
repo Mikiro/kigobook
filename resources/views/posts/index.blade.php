@@ -80,8 +80,12 @@
             <div class="row">    
               <div class="image-book vertical img-fluid" alt="">
                   <div class="inner-box">
-                      <div class="" style="height: auto"><p class="display-4">季語別俳句集</p></div>
                       <table class="table table-responsive">
+                          <tr>
+                              <td>
+                                  <p class="display-4">季語別俳句集</p>
+                              </td>
+                          </tr>
                           <tr>
                               <td class="">
                                   <a href="/posts/search" class="text-white bg-dark mb-3 mt-3" style="text-decoration: none;">
