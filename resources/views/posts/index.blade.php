@@ -54,7 +54,7 @@
         -ms-text-combine-horizontal: all;
     }
     
-    .inner-box{
+    .table, th, td{
         border-style:none!important;
     }
     
