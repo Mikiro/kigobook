@@ -58,9 +58,6 @@
        .row{height:400px!important;}
     }
     
-   
-   
-  
     </style>
     
 

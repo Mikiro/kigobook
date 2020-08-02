@@ -79,7 +79,7 @@
         <div class="container">
             <div class="row">    
               <div class="image-book vertical img-fluid" alt="">
-                  <div class="inner-box">
+                  <div class="container inner-box">
                       <table class="table table-responsive">
                           <tr>
                               <td>
