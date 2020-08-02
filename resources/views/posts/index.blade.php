@@ -59,6 +59,7 @@
     }
     
     
+    
       @media screen and (max-height: 823px) {
    /* 縦幅が823px以下の場合に適用するスタイル */
        .row{height:500px!important;}
@@ -78,7 +79,7 @@
         <div class="container">
           <div class="row">
               <div class="image-book vertical img-fluid" alt="">
-                  <div class="container inner-box">
+                  <div class="container inner-box" style="margin-right:auto; margin-left:auto; width:600px;">
                       <div class="" style="height: auto"><p class="display-4">季語別俳句集</p></div>
                       <table class="table table-responsive">
                           <tr>
