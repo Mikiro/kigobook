@@ -22,6 +22,7 @@
                     <a class="dropdown-item" href="{{ route('posts.fallWords')}}">秋の季語</a>
                     <a class="dropdown-item" href="{{ route('posts.winterWords')}}">冬の季語</a>
                     <a class="dropdown-item" href="{{ route('posts.newYearWords')}}">新年の季語</a>
+                    <a class="dropdown-item" href="{{ route('posts.noSeasonWords')}}">無季語</a>
                 </div>
             </li>
           </ul>        
