@@ -231,7 +231,7 @@ class PostController extends Controller
     public function noSeasonWordPost()
     {
         
-	$noSeasonWordsPosts = Word::whereHas('posts', function ($query){
+	$noSeasonWordPosts = Word::whereHas('posts', function ($query){
 	    $query->where('word_id', request('id'));
 	})->get(); 
 	
