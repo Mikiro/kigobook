@@ -34,7 +34,10 @@ Route::get('posts/winterWordPost/{id}', 'PostController@WinterWordPost')->name('
     
 Route::get('posts/newYearWords', 'PostController@newYearWords')->name('posts.newYearWords');
 Route::get('posts/newYearWordPost/{id}', 'PostController@newYearWordPost')->name('posts.newYearWordPost');
-    
+
+Route::get('posts/noSeasonWords', 'PostController@noSeasonWords')->name('posts.noSeasonWords');
+Route::get('posts/noSeasonWordPost/{id}', 'PostController@noSeasonWordPost')->name('posts.noSeasonWordPost');
+
 Route::get('posts/search', 'PostController@search')->name('posts.search');
 Route::get('posts/result', 'PostController@result')->name('posts.result');
 Route::post('posts/result', 'PostController@result')->name('posts.result');

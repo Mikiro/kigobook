@@ -128,6 +128,12 @@
                                   新年の季語</h1></a>
                               </td>
                           </tr>
+                          <tr>
+                              <td class="">
+                                  <a href="/posts/noSeasonWords" class="text-black btn-light mb-3 mt-3" style="text-decoration: none;">
+                                 無季</h1></a>
+                              </td>
+                          </tr>
                       </table>
                     </div>
                </div>

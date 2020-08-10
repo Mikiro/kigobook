@@ -97,6 +97,8 @@ class PostController extends Controller
        
     }
     
+    
+    
     public function SpringWords()
     {
         
@@ -126,6 +128,8 @@ class PostController extends Controller
         return view('posts.springWordPost')->with('springWordPosts',$springWordPosts);
     }
     
+    
+    
     public function SummerWords(){
         
     $summerWords = Word::whereIn('category_id', [8,9,10,11,12,13,14])->get();
@@ -146,6 +150,8 @@ class PostController extends Controller
 	   
         return view('posts.summerWordPost')->with('summerWordPosts',$summerWordPosts);
     }
+    
+    
     
     public function fallWords(){
         
@@ -168,6 +174,8 @@ class PostController extends Controller
 	return view('posts.fallWordPost')->with('fallWordPosts',$fallWordPosts);
     }
     
+    
+    
     public function WinterWords()
     {
         
@@ -188,6 +196,8 @@ class PostController extends Controller
 
 	return view('posts.winterWordPost')->with('winterWordPosts',$winterWordPosts);
     }
+    
+    
     
     public function newYearWords()
     {
@@ -211,7 +221,29 @@ class PostController extends Controller
     }
     
     
+    public function noSeasonWords()
+    {
+        
+	$noSeasonWords = Word::whereIn('category_id', [36])->get();
+	return view('posts.noSeasonWords')->with('noSeasonWords',$noSeasonWords);
+    }
     
+    public function noSeasonWordPost()
+    {
+        
+	$noSeasonWordsPosts = Word::whereHas('posts', function ($query){
+	    $query->where('word_id', request('id'));
+	})->get(); 
+	
+		if($noSeasonWordPosts->isEmpty()) {
+        abort('404');
+    }
+
+	return view('posts.noSeasonWordPost')->with('noSeasonWordPosts',$noSeasonWordPosts);
+    }
+    
+    
+
     public function search(){
         $query = Post::query();
         $data = $query->get();
