@@ -93,6 +93,10 @@
         </div>
         
     </div>
+    
+    <div class="d-flex justify-content-center">
+        {{ $words->links() }}
+    </div>
  
 @endsection
 
