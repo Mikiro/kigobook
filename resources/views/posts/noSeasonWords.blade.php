@@ -10,9 +10,9 @@
                 <div "table-responsive-md">
                     
                     <table class="table">
-                       @foreach (noSeasonWords()->chunk(15) as $chunk)
+                       @foreach ($noSeasonWords->chunk(15) as $chunk)
                         <div class="row">
-                               @foreach($chunk as noSeasonWord) 
+                               @foreach($chunk as $noSeasonWord) 
                              <div class="m-2">
                                 <a class="btn btn-danger" href="{{ route('posts.noSeasonWordPost', $noSeasonWord) }}" role="button">{{ $noSeasonWord->name }}</a>
                              </div>
