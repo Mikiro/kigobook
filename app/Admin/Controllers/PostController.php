@@ -29,6 +29,7 @@ class PostController extends AdminController
     {
         
         $grid = new Grid(new Post);
+        $words  = Word::pluck('name', 'id');
 
         $grid->column('id', __('Id'))->sortable();
         $grid->column('content_upper', __('上句'));
@@ -51,7 +52,11 @@ class PostController extends AdminController
                 $filter->startsWith('date','元号');
             });
             $filter->column(1/2, function ($filter) {
-                $filter->word()->name()->contains('name','季語');          // Like検索
+                $filter->where(function ($query){
+                    $query->whereHas('word', function ($query) {
+                        $query->where('name', 'like', "%{$this->input}%");
+                    });
+                }, '季語');
             });
         });
 
