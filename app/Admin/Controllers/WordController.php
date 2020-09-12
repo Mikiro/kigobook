@@ -32,6 +32,7 @@ class WordController extends AdminController
         $grid->category()->name('季節'); 
         $grid->column('name', __('季語'))->sortable();
         $grid->column('explain',__('説明文'))->style('max-width:200px;word-break:break-all;');
+        $grid->photo('photo')->image();
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
         
@@ -61,6 +62,7 @@ class WordController extends AdminController
 
         $show->field('id', __('Id'));
         $show->field('category_id', __('Category_id'));
+        $show->field('photo')->image();
         $show->field('created_at', __('Created at'));
         $show->field('updated_at', __('Updated at'));
 
@@ -79,6 +81,7 @@ class WordController extends AdminController
 
         $form->text('name', __('Name'));
         $form->textarea('explain', __('explain'));
+        $form->image('photo', 'Photo')->removable();
         $form->select('category_id', 'Category')->options($categories);
 
         return $form;
