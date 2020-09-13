@@ -15,7 +15,7 @@ Route::group([
     $router->resource('posts', PostController::class);
     $router->resource('categories', CategoryController::class);
     $router->resource('words', WordController::class);
-    
+
     
 });
 

@@ -10,5 +10,5 @@
 
 @section('link')
   <p><a href="/">to TOP&gt;&gt;</a></p>
-  <img class="img-fluid img-thumbnail " src="{{ asset('image/404im.png') }}" alt="logo">
+  <img class="img-fluid img-thumbnail " src="{{ asset('errimage/404im.png') }}" alt="logo">
 @endsection
