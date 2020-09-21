@@ -32,7 +32,7 @@ class WordController extends AdminController
         $grid->category()->name('季節'); 
         $grid->column('name', __('季語'))->sortable();
         $grid->column('explain',__('説明文'))->style('max-width:200px;word-break:break-all;');
-        $grid->photo('photo')->image();
+        $grid->photo('photo');
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
         
