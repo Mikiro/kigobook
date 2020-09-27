@@ -52,23 +52,23 @@ class Handler extends ExceptionHandler
     //     return parent::render($request, $exception);
     // }
     
-    public function render($request, Exception $e) {
+//     public function render($request, Exception $e) {
 
-    // 例外のクラスで判定する
-    if($e instanceof HttpResponseException) {
-        return parent::render($request, $e);
-    }
+//     // 例外のクラスで判定する
+//     if($e instanceof HttpResponseException) {
+//         return parent::render($request, $e);
+//     }
 
-    if($this->isHttpException($e)) {
-        // 403
-        if($e->getStatusCode() == 403) {
-            return response()->view('errors.403', ['message' => $e->getMessage()]);
-        }
-        // 404
-        if($e->getStatusCode() == 404) {
-            return response()->view('errors.404');
-        }
-    } 
-    return response()->view('errors.500');
-}
+//     if($this->isHttpException($e)) {
+//         // 403
+//         if($e->getStatusCode() == 403) {
+//             return response()->view('errors.403', ['message' => $e->getMessage()]);
+//         }
+//         // 404
+//         if($e->getStatusCode() == 404) {
+//             return response()->view('errors.404');
+//         }
+//     } 
+//     return response()->view('errors.500');
+// }
 }
