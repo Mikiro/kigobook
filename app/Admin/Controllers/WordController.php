@@ -83,7 +83,7 @@ class WordController extends AdminController
         $form->textarea('explain', __('explain'));
         $form->image('photo', 'Photo')->removable();
         $form->select('category_id', 'Category')->options($categories);
-        $path = Storage::disk('s3')->putFile('photos', new File('/path/to/photo'));
+        // $path = Storage::disk('s3')->putFile('photos', new File('/path/to/photo'));
 
         return $form;
     }
