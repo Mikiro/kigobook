@@ -9,6 +9,7 @@ use Encore\Admin\Controllers\AdminController;
 use Encore\Admin\Form;
 use Encore\Admin\Grid;
 use Encore\Admin\Show;
+use Storage;
 
 class WordController extends AdminController
 {
@@ -27,6 +28,7 @@ class WordController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Word);
+        
 
         $grid->column('id', __('Id'))->sortable();
         $grid->category()->name('季節'); 
@@ -77,13 +79,17 @@ class WordController extends AdminController
     protected function form()
     {
         $categories = Category::pluck('name', 'id');
+        
         $form = new Form(new Word);
-
+        
+        // $path = Storage::disk('s3');
+        
         $form->text('name', __('Name'));
         $form->textarea('explain', __('explain'));
         $form->image('photo', 'Photo')->removable();
         $form->select('category_id', 'Category')->options($categories);
-        // $path = Storage::disk('s3')->putFile('photos', new File('/path/to/photo'));
+       
+        
 
         return $form;
     }
