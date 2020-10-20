@@ -79,10 +79,10 @@ class WordController extends AdminController
     protected function form()
     {
         $categories = Category::pluck('name', 'id');
-        
+        // $path = Storage::disk('s3');
         $form = new Form(new Word);
         
-        // $path = Storage::disk('s3');
+        
         
         $form->text('name', __('Name'));
         $form->textarea('explain', __('explain'));
