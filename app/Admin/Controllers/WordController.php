@@ -79,7 +79,7 @@ class WordController extends AdminController
     protected function form()
     {
         $categories = Category::pluck('name', 'id');
-        // $path = Storage::disk('s3');
+       
         $form = new Form(new Word);
         
         
