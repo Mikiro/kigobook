@@ -32,7 +32,8 @@ class WordController extends AdminController
 
         $grid->column('id', __('Id'))->sortable();
         $grid->category()->name('季節'); 
-        $grid->column('name', __('季語'))->sortable();
+        $grid->column('name', __('季語'));
+        $grid->column('yomigana', __('よみがな'))->sortable();
         $grid->column('explain',__('説明文'))->style('max-width:200px;word-break:break-all;');
         $grid->photo('photo')->image();
         $grid->column('created_at', __('Created at'));
@@ -63,6 +64,7 @@ class WordController extends AdminController
         $show = new Show(Word::findOrFail($id));
 
         $show->field('id', __('Id'));
+        $show->field('yomigana', __('Yomigana'));
         $show->field('category_id', __('Category_id'));
         $show->field('photo')->image();
         $show->field('created_at', __('Created at'));
@@ -85,6 +87,7 @@ class WordController extends AdminController
         
         
         $form->text('name', __('Name'));
+        $form->text('yomigana', __('Yomigana'));
         $form->textarea('explain', __('explain'));
         $form->image('photo', 'Photo')->removable();
         $form->select('category_id', 'Category')->options($categories);
