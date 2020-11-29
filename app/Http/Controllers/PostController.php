@@ -30,7 +30,7 @@ class PostController extends Controller
     
     public function kigobook()
     {
-        $words = Word::with('posts')->paginate(15);
+        $words = Word::with('posts')->orderBy('yomigana','ASC')->paginate(10);
         return view('posts.kigobook')->with('words',$words);
     }
     
