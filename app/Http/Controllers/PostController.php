@@ -31,7 +31,6 @@ class PostController extends Controller
     public function kigobook()
     {
         $words = Word::with('posts')->orderBy('yomigana','asc')
-        ->orderByRaw('CAST(yomigana as CHAR) COLLATE utf8_unicode_ci asc')
         ->paginate(10);
         
         return view('posts.kigobook')->with('words',$words);
