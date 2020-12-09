@@ -69,13 +69,13 @@
                 <div class="" style=" margin-right: 15px;">
                     <table class="">
                         <tr>
-                            <td class="text-nowrap" style="height: 100%; line-height: 3.5; font-weight:800; margin-left: 25px;">{{$word->name}}</td>
+                            <td class="text-nowrap" style="height: 100%; line-height: 3.5; font-weight:800; margin-left: 25px; padding-top: 20px;">{{$word->name}}</td>
                         </tr>
                          @foreach($word->posts as $post )
                          
                         <table class="table-hover">
                             <tr>
-                                <td class="text-nowrap" height="630">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>
+                                <td class="text-nowrap" height="630" style="padding-top: 20px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>
                             </tr>
                         </table>
                         <table class="table-hover border-left">
