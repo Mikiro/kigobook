@@ -62,9 +62,7 @@
     
 
     <div class="vertical mw-100 overflow-auto panel panel-default panel-warning mx-auto">
-     
          <div class="row" style="height:640px;">
-             
             @foreach($words as $word)
                 <div class="" style=" margin-right: 15px;">
                     <table class="">
@@ -91,7 +89,6 @@
                 </div>
             @endforeach
         </div>
-        
     </div>
     
     <div class="d-flex justify-content-center">

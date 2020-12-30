@@ -13,7 +13,8 @@ class Category extends Model
     }
     
     public function words(){
-        return $this->hasMany(Word::class);
+        return $this->hasMany(Word::class)
+        ->orderBy('yomigana','asc');
     }
     
 }

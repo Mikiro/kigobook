@@ -103,15 +103,21 @@ class PostController extends Controller
     
     public function SpringWords()
     {
-        
-    $springWords = Word::whereIn('category_id', [1,2,3,4,5,6,7])->get();
     
-    
-    return view('posts.springWords')->with('springWords',$springWords);
-        
-// 	$springPosts = Post::where('category_id', '1')->paginate(6);
-
-// 	return view('posts.spring')->with('springPosts',$springPosts);
+    $springWordsTimes = Word::whereIn('category_id', [1])->orderBy('yomigana','asc')->get();
+    $springWordsAstronomies = Word::whereIn('category_id', [2])->orderBy('yomigana','asc')->get();
+    $springWordsGeographies = Word::whereIn('category_id', [3])->orderBy('yomigana','asc')->get();
+    $springWordsLives = Word::whereIn('category_id', [4])->orderBy('yomigana','asc')->get();
+    $springWordsEvents = Word::whereIn('category_id', [5])->orderBy('yomigana','asc')->get();
+    $springWordsAnimals = Word::whereIn('category_id', [6])->orderBy('yomigana','asc')->get();
+    $springWordsPlants = Word::whereIn('category_id', [7])->orderBy('yomigana','asc')->get();
+    return view('posts.springWords')->with('springWordsTimes', $springWordsTimes)
+                                    ->with('springWordsAstronomies', $springWordsAstronomies)
+                                    ->with('springWordsGeographies', $springWordsGeographies)
+                                    ->with('springWordsLives', $springWordsLives)
+                                    ->with('springWordsEvents', $springWordsEvents)
+                                    ->with('springWordsAnimals', $springWordsAnimals)
+                                    ->with('springWordsPlants', $springWordsPlants);
     }
     
     public function SpringWordPost(){
@@ -124,23 +130,31 @@ class PostController extends Controller
     if($springWordPosts->isEmpty()) {
         abort('404');
     }
-    
     //ずっとnullを使っていた isEmpty()で勝利！
-        
         return view('posts.springWordPost')->with('springWordPosts',$springWordPosts);
     }
     
     
-    
     public function SummerWords(){
         
-    $summerWords = Word::whereIn('category_id', [8,9,10,11,12,13,14])->get();
-    return view('posts.summerWords')->with('summerWords',$summerWords);
+    $summerWordsTimes = Word::whereIn('category_id', [8])->orderBy('yomigana','asc')->get();
+    $summerWordsAstronomies = Word::whereIn('category_id', [9])->orderBy('yomigana','asc')->get();
+    $summerWordsGeographies = Word::whereIn('category_id', [10])->orderBy('yomigana','asc')->get();
+    $summerWordsLives = Word::whereIn('category_id', [11])->orderBy('yomigana','asc')->get();
+    $summerWordsEvents = Word::whereIn('category_id', [12])->orderBy('yomigana','asc')->get();
+    $summerWordsAnimals = Word::whereIn('category_id', [13])->orderBy('yomigana','asc')->get();
+    $summerWordsPlants = Word::whereIn('category_id', [14])->orderBy('yomigana','asc')->get();
+    return view('posts.summerWords')->with('summerWordsTimes', $summerWordsTimes)
+                                    ->with('summerWordsAstronomies', $summerWordsAstronomies)
+                                    ->with('summerWordsGeographies', $summerWordsGeographies)
+                                    ->with('summerWordsLives', $summerWordsLives)
+                                    ->with('summerWordsEvents', $summerWordsEvents)
+                                    ->with('summerWordsAnimals', $summerWordsAnimals)
+                                    ->with('summerWordsPlants', $summerWordsPlants);
         
     }
     
     public function SummerWordPost(){
-        // $words  = Word::pluck('name', 'id');
         
 	    $summerWordPosts = Word::whereHas('posts', function ($query){
 	        $query->where('word_id', request('id'));
@@ -157,8 +171,20 @@ class PostController extends Controller
     
     public function fallWords(){
         
-    $fallWords = Word::whereIn('category_id', [15,16,17,18,19,20,21])->get();
-    return view('posts.fallWords')->with('fallWords',$fallWords);
+    $fallWordsTimes = Word::whereIn('category_id', [15])->orderBy('yomigana','asc')->get();
+    $fallWordsAstronomies = Word::whereIn('category_id', [16])->orderBy('yomigana','asc')->get();
+    $fallWordsGeographies = Word::whereIn('category_id', [17])->orderBy('yomigana','asc')->get();
+    $fallWordsLives = Word::whereIn('category_id', [18])->orderBy('yomigana','asc')->get();
+    $fallWordsEvents = Word::whereIn('category_id', [19])->orderBy('yomigana','asc')->get();
+    $fallWordsAnimals = Word::whereIn('category_id', [21])->orderBy('yomigana','asc')->get();
+    $fallWordsPlants = Word::whereIn('category_id', [22])->orderBy('yomigana','asc')->get();
+    return view('posts.fallWords')->with('fallWordsTimes', $fallWordsTimes)
+                                    ->with('fallWordsAstronomies', $fallWordsAstronomies)
+                                    ->with('fallWordsGeographies', $fallWordsGeographies)
+                                    ->with('fallWordsLives', $fallWordsLives)
+                                    ->with('fallWordsEvents', $fallWordsEvents)
+                                    ->with('fallWordsAnimals', $fallWordsAnimals)
+                                    ->with('fallWordsPlants', $fallWordsPlants);
         
     }
     
@@ -181,8 +207,20 @@ class PostController extends Controller
     public function WinterWords()
     {
         
-	$winterWords = Word::whereIn('category_id', [22,23,24,25,26,27,28])->get();
-	return view('posts.winterWords')->with('winterWords',$winterWords);
+	$winterWordsTimes = Word::whereIn('category_id', [23])->orderBy('yomigana','asc')->get();
+    $winterWordsAstronomies = Word::whereIn('category_id', [24])->orderBy('yomigana','asc')->get();
+    $winterWordsGeographies = Word::whereIn('category_id', [25])->orderBy('yomigana','asc')->get();
+    $winterWordsLives = Word::whereIn('category_id', [26])->orderBy('yomigana','asc')->get();
+    $winterWordsEvents = Word::whereIn('category_id', [27])->orderBy('yomigana','asc')->get();
+    $winterWordsAnimals = Word::whereIn('category_id', [27])->orderBy('yomigana','asc')->get();
+    $winterWordsPlants = Word::whereIn('category_id', [28])->orderBy('yomigana','asc')->get();
+    return view('posts.winterWords')->with('winterWordsTimes', $winterWordsTimes)
+                                    ->with('winterWordsAstronomies', $winterWordsAstronomies)
+                                    ->with('winterWordsGeographies', $winterWordsGeographies)
+                                    ->with('winterWordsLives', $winterWordsLives)
+                                    ->with('winterWordsEvents', $winterWordsEvents)
+                                    ->with('winterWordsAnimals', $winterWordsAnimals)
+                                    ->with('winterWordsPlants', $winterWordsPlants);
     }
     
     public function winterWordPost()
@@ -204,8 +242,20 @@ class PostController extends Controller
     public function newYearWords()
     {
         
-	$newYearWords = Word::whereIn('category_id', [29,30,31,32,33,34,35])->get();
-	return view('posts.newYearWords')->with('newYearWords',$newYearWords);
+	$newYearWordsTimes = Word::whereIn('category_id', [29])->orderBy('yomigana','asc')->get();
+    $newYearWordsAstronomies = Word::whereIn('category_id', [30])->orderBy('yomigana','asc')->get();
+    $newYearWordsGeographies = Word::whereIn('category_id', [31])->orderBy('yomigana','asc')->get();
+    $newYearWordsLives = Word::whereIn('category_id', [32])->orderBy('yomigana','asc')->get();
+    $newYearWordsEvents = Word::whereIn('category_id', [33])->orderBy('yomigana','asc')->get();
+    $newYearWordsAnimals = Word::whereIn('category_id', [34])->orderBy('yomigana','asc')->get();
+    $newYearWordsPlants = Word::whereIn('category_id', [35])->orderBy('yomigana','asc')->get();
+    return view('posts.newYearWords')->with('newYearWordsTimes', $newYearWordsTimes)
+                                    ->with('newYearWordsAstronomies', $newYearWordsAstronomies)
+                                    ->with('newYearWordsGeographies', $newYearWordsGeographies)
+                                    ->with('newYearWordsLives', $newYearWordsLives)
+                                    ->with('newYearWordsEvents', $newYearWordsEvents)
+                                    ->with('newYearWordsAnimals', $newYearWordsAnimals)
+                                    ->with('newYearWordsPlants', $newYearWordsPlants);
     }
     
     public function newYearWordPost()
