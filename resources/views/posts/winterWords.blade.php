@@ -8,7 +8,7 @@
         </div>
             <div class="card-body mx-auto">
                 <!--<div "table-responsive-md">-->
-                        <div class="row" style="width:1000px;">
+                        <div class="row">
                             <table class="table">
                                 <thead>
                                     <tr>
