@@ -176,8 +176,8 @@ class PostController extends Controller
     $fallWordsGeographies = Word::whereIn('category_id', [17])->orderBy('yomigana','asc')->get();
     $fallWordsLives = Word::whereIn('category_id', [18])->orderBy('yomigana','asc')->get();
     $fallWordsEvents = Word::whereIn('category_id', [19])->orderBy('yomigana','asc')->get();
-    $fallWordsAnimals = Word::whereIn('category_id', [21])->orderBy('yomigana','asc')->get();
-    $fallWordsPlants = Word::whereIn('category_id', [22])->orderBy('yomigana','asc')->get();
+    $fallWordsAnimals = Word::whereIn('category_id', [20])->orderBy('yomigana','asc')->get();
+    $fallWordsPlants = Word::whereIn('category_id', [21])->orderBy('yomigana','asc')->get();
     return view('posts.fallWords')->with('fallWordsTimes', $fallWordsTimes)
                                     ->with('fallWordsAstronomies', $fallWordsAstronomies)
                                     ->with('fallWordsGeographies', $fallWordsGeographies)
@@ -207,11 +207,11 @@ class PostController extends Controller
     public function WinterWords()
     {
         
-	$winterWordsTimes = Word::whereIn('category_id', [23])->orderBy('yomigana','asc')->get();
-    $winterWordsAstronomies = Word::whereIn('category_id', [24])->orderBy('yomigana','asc')->get();
-    $winterWordsGeographies = Word::whereIn('category_id', [25])->orderBy('yomigana','asc')->get();
-    $winterWordsLives = Word::whereIn('category_id', [26])->orderBy('yomigana','asc')->get();
-    $winterWordsEvents = Word::whereIn('category_id', [27])->orderBy('yomigana','asc')->get();
+	$winterWordsTimes = Word::whereIn('category_id', [22])->orderBy('yomigana','asc')->get();
+    $winterWordsAstronomies = Word::whereIn('category_id', [23])->orderBy('yomigana','asc')->get();
+    $winterWordsGeographies = Word::whereIn('category_id', [24])->orderBy('yomigana','asc')->get();
+    $winterWordsLives = Word::whereIn('category_id', [25])->orderBy('yomigana','asc')->get();
+    $winterWordsEvents = Word::whereIn('category_id', [26])->orderBy('yomigana','asc')->get();
     $winterWordsAnimals = Word::whereIn('category_id', [27])->orderBy('yomigana','asc')->get();
     $winterWordsPlants = Word::whereIn('category_id', [28])->orderBy('yomigana','asc')->get();
     return view('posts.winterWords')->with('winterWordsTimes', $winterWordsTimes)

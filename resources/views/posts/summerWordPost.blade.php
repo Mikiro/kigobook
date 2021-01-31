@@ -38,6 +38,10 @@
          font-weight: normal;
      }
      
+     .vertical p {
+         font-size: calc(4.5rem + ((1vw - 0.54rem) * 0.5143));
+     }
+     
      .text-combine{
         text-combine-upright: all;
         -webkit-text-combine: horizontal;
@@ -57,20 +61,37 @@
     </style>
     
     <div class="vertical mw-100 overflow-auto panel panel-default panel-warning mx-auto">
-     
          <div class="row" style="height:640px;">
-             
             @foreach($summerWordPosts as $summerWordPost)
                 <div class="" style=" margin-right: 15px;">
                     <table class="">
                         <tr>
-                            <td class="text-nowrap" style="height: 100%; line-height: 3.5; font-weight:800; margin-left: 25px;">{{$summerWordPost->name}}</td>
+                            <p class="text-nowrap" style="line-height: 1.0;  font-weight:1000; padding-top: 10px; padding-left: 10px; padding-right: 30px;">{{$summerWordPost->name}}</p>
                         </tr>
-                         @foreach($summerWordPost->posts as $post )
+                        <tr>
+                            @isset ($summerWordPost->photo)
+                            <td style="padding-top: 20px;">
+                                <a href="{{ Storage::disk('s3')->url("{$summerWordPost->photo}") }}" data-lightbox="group">
+                                    <img src="{{ Storage::disk('s3')->url("{$summerWordPost->photo}") }}" class="" width="193" height="130"/>
+                                </a>
+                            </td>
+                            @endisset
+                            
+                            <td class="" style="height: 450px; line-height: 1.0; font-weight:800; padding: 20px 10px 10px 10px;">{{$summerWordPost->explain}}</td>
+                        </tr>
+                        <tr>
+                            
+                        </tr>
                          
+                    </table>
+                </div>
+            @endforeach
+            <div class="row" style="height:640px;">         
+                @foreach($summerWordPost->posts as $post )
+                <div class="" style="margin-right: 15px;">
                         <table class="table-hover">
                             <tr>
-                                <td class="text-nowrap" height="630">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>
+                                <td class="text-nowrap" height="630" style="padding-top: 20px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>
                             </tr>
                         </table>
                         <table class="table-hover border-left">
@@ -80,12 +101,10 @@
                                 <td height="66" class="text-nowrap">{{$post->date}} <span class="text-combine">{{$post->year}}</span> </td>
                             </tr>
                         </table>
-                       
-                         @endforeach
-                    </table>
                 </div>
-            @endforeach
-        </div>
+                @endforeach
+            </div>
+        </div>     
     </div>
  
 @endsection

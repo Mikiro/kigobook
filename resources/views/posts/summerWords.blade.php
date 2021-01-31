@@ -12,7 +12,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">夏 時候</th>
+                                        <h3 style="margin-left: 10px;" scope="col">夏 時候</h3>
                                     </tr>
                                 </thead>
                                 @foreach($summerWordsTimes->chunk(100) as $chunk)
@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">夏 天文</th>
+                                        <h3 style="margin-left: 10px;" scope="col">夏 天文</h3>
                                     </tr>
                                 </thead>
                                 @foreach($summerWordsAstronomies->chunk(100) as $chunk)
@@ -47,7 +47,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">夏 地理</th>
+                                        <h3 style="margin-left: 10px;" scope="col">夏 地理</h3>
                                     </tr>
                                 </thead>
                                 @foreach($summerWordsGeographies->chunk(100) as $chunk)
@@ -64,7 +64,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">夏 生活</th>
+                                        <h3 style="margin-left: 10px;" scope="col">夏 生活</h3>
                                     </tr>
                                 </thead>
                                 @foreach($summerWordsLives->chunk(100) as $chunk)
@@ -81,7 +81,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">夏 行事</th>
+                                        <h3 style="margin-left: 10px;" scope="col">夏 行事</h3>
                                     </tr>
                                 </thead>
                                 @foreach($summerWordsEvents->chunk(100) as $chunk)
@@ -98,7 +98,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">夏 動物</th>
+                                        <h3 style="margin-left: 10px;" scope="col">夏 動物</h3>
                                     </tr>
                                 </thead>
                                 @foreach($summerWordsAnimals->chunk(100) as $chunk)
@@ -115,7 +115,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">夏 植物</th>
+                                        <h3 style="margin-left: 10px;" scope="col">夏 植物</h3>
                                     </tr>
                                 </thead>
                                 @foreach($summerWordsPlants->chunk(100) as $chunk)

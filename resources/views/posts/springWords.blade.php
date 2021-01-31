@@ -12,7 +12,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">春 時候</th>
+                                        <h3 style="margin-left: 10px;" scope="col">春 時候</h3>
                                     </tr>
                                 </thead>
                                 @foreach($springWordsTimes->chunk(100) as $chunk)
@@ -30,7 +30,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">春 天文</th>
+                                        <h3 style="margin-left: 10px;" scope="col">春 天文</h3>
                                     </tr>
                                 </thead>
                                 @foreach($springWordsAstronomies->chunk(100) as $chunk)
@@ -47,7 +47,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">春 地理</th>
+                                        <h3 style="margin-left: 10px;" scope="col">春 地理</h3>
                                     </tr>
                                 </thead>
                                 @foreach($springWordsGeographies->chunk(100) as $chunk)
@@ -64,7 +64,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">春 生活</th>
+                                        <h3 style="margin-left: 10px;" scope="col">春 生活</h3>
                                     </tr>
                                 </thead>
                                 @foreach($springWordsLives->chunk(100) as $chunk)
@@ -81,8 +81,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">春 行事
-                                        </th>
+                                        <h3 style="margin-left: 10px;" scope="col">春 行事</h3>
                                     </tr>
                                 </thead>
                                 @foreach($springWordsEvents->chunk(100) as $chunk)
@@ -99,7 +98,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">春 動物</th>
+                                        <h3 style="margin-left: 10px;" scope="col">春 動物</h3>
                                     </tr>
                                 </thead>
                                 @foreach($springWordsAnimals->chunk(100) as $chunk)
@@ -116,7 +115,7 @@
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th scope="col">春 植物</th>
+                                        <h3 style="margin-left: 10px;" scope="col">春 植物</h3>
                                     </tr>
                                 </thead>
                                 @foreach($springWordsPlants->chunk(100) as $chunk)
