@@ -72,7 +72,7 @@
                             @isset ($summerWordPost->photo)
                             <td style="padding-top: 20px;">
                                 <a href="{{ Storage::disk('s3')->url("{$summerWordPost->photo}") }}" data-lightbox="group">
-                                    <img src="{{ Storage::disk('s3')->url("{$summerWordPost->photo}") }}" class="" width="193" height="130"/>
+                                    <img src="{{ Storage::disk('s3')->url("{$summerWordPost->photo}") }}" class="" width="250" height="180"/>
                                 </a>
                             </td>
                             @endisset
