@@ -13,6 +13,8 @@ use Encore\Admin\Show;
 
 class WordController extends AdminController
 {
+    
+    
     /**
      * Title for current resource.
      *
@@ -72,6 +74,8 @@ class WordController extends AdminController
 
         return $show;
     }
+    
+    
 
     /**
      * Make a form builder.
@@ -81,9 +85,7 @@ class WordController extends AdminController
     protected function form()
     {
         $categories = Category::pluck('name', 'id');
-       
         $form = new Form(new Word);
-        
         
         
         $form->text('name', __('Name'));
@@ -91,10 +93,21 @@ class WordController extends AdminController
         $form->textarea('explain', __('explain'));
         $form->image('photo', 'Photo')->removable();
         $form->select('category_id', 'Category')->options($categories);
-       
-        
 
         return $form;
     }
     
  }
+
+// ２月２２日調べた分残し　あとで必要なくなったら消す
+// public function setPhotoAttribute($photo)
+//     {
+//         if (is_array($photo)) {
+//             $this->attributes['photo'] = json_decode($photo);
+//         }
+//     }
+ 
+//     public function getPhotoAttribute($photo)
+//     {
+//         return json_decode($photo, true);
+//     }
