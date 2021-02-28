@@ -291,16 +291,16 @@ class PostController extends Controller
 //         abort('404');
 //     }
 
-	return view('posts.noSeasonWordPost')->with('noSeasonWordPosts',$noSeasonWordPosts);
-    }
+// 	return view('posts.noSeasonWordPost')->with('noSeasonWordPosts',$noSeasonWordPosts);
+//     }
     
     
 
-    public function search(){
-        $query = Post::query();
-        $data = $query->get();
-        return view('posts.search',compact('data'));
-    }
+//     public function search(){
+//         $query = Post::query();
+//         $data = $query->get();
+//         return view('posts.search',compact('data'));
+//     }
     
     // public function result(Request $request)
     // {   
