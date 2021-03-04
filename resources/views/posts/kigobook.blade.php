@@ -64,38 +64,40 @@
 
     <div class="vertical mw-100 overflow-auto panel panel-default panel-warning mx-auto">
         
-         <div class="row" style="height:640px;">
-            @foreach($words as $word)
-                <div class="" style=" margin-right: 15px;">
-                    <table class="">
-                        <tr>
-                            <td class="text-nowrap" style="height: 100%; line-height: 3.5; font-weight:800; margin-left: 25px; padding-top: 20px;">{{$word->name}}</td>
-                        </tr>
-                         @foreach($word->posts as $post )
+        <h1>aaaaa</h1>
+        
+        <!-- <div class="row" style="height:640px;">-->
+        <!--    @foreach($words as $word)-->
+        <!--        <div class="" style=" margin-right: 15px;">-->
+        <!--            <table class="">-->
+        <!--                <tr>-->
+        <!--                    <td class="text-nowrap" style="height: 100%; line-height: 3.5; font-weight:800; margin-left: 25px; padding-top: 20px;">{{$word->name}}</td>-->
+        <!--                </tr>-->
+        <!--                 @foreach($word->posts as $post )-->
                          
-                        <table class="table-hover">
-                            <tr>
-                                <td class="text-nowrap" height="630" style="padding-top: 20px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>
-                            </tr>
-                        </table>
-                        <table class="table-hover border-left">
-                            <tr>
-                                <td height="277"></td>
-                                <td height="277"class="text-nowrap">{{ $post->author}}</td>
-                                <td height="66" class="text-nowrap">{{$post->date}} <span class="text-combine">{{$post->year}}</span> </td>
-                            </tr>
-                        </table>
+        <!--                <table class="table-hover">-->
+        <!--                    <tr>-->
+        <!--                        <td class="text-nowrap" height="630" style="padding-top: 20px;">{{$post->content_upper}}{{$post->content_middle}}{{$post->content_bottom}}</td>-->
+        <!--                    </tr>-->
+        <!--                </table>-->
+        <!--                <table class="table-hover border-left">-->
+        <!--                    <tr>-->
+        <!--                        <td height="277"></td>-->
+        <!--                        <td height="277"class="text-nowrap">{{ $post->author}}</td>-->
+        <!--                        <td height="66" class="text-nowrap">{{$post->date}} <span class="text-combine">{{$post->year}}</span> </td>-->
+        <!--                    </tr>-->
+        <!--                </table>-->
                        
-                         @endforeach
-                    </table>
-                </div>
-            @endforeach
-        </div>
+        <!--                 @endforeach-->
+        <!--            </table>-->
+        <!--        </div>-->
+        <!--    @endforeach-->
+        <!--</div>-->
     </div>
     
-    <div class="d-flex justify-content-center">
-        {{ $words->links() }}
-    </div>
+    <!--<div class="d-flex justify-content-center">-->
+    <!--    {{ $words->links() }}-->
+    <!--</div>-->
  
 @endsection
 
