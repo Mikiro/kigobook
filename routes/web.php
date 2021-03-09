@@ -43,6 +43,7 @@ Route::get('posts/result', 'PostController@result')->name('posts.result');
 Route::post('posts/result', 'PostController@result')->name('posts.result');
 Route::get('posts/kigobook', 'PostController@kigobook')->name('posts.kigobook');
 
+Route::get('/test', 'PostController@test')->name('posts.test');
 
     // Route::resource('posts', PostController::class);
 
