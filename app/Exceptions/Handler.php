@@ -52,6 +52,9 @@ class Handler extends ExceptionHandler
         return parent::render($request, $exception);
     }
     
+
+}
+
 //     public function render($request, Exception $e) {
 
 //     // 例外のクラスで判定する
@@ -71,4 +74,3 @@ class Handler extends ExceptionHandler
 //     } 
 //     return response()->view('errors.500');
 // }
-}
