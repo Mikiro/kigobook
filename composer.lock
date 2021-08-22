@@ -623,7 +623,7 @@
             },
             "require": {
                 "doctrine/dbal": "2.*",
-                "laravel/framework": "6.20.26",
+                "laravel/framework": "5.5.50",
                 "php": ">=7.0.0",
                 "symfony/dom-crawler": "~3.1|~4.0|~5.0"
             },
@@ -1189,7 +1189,7 @@
                 "erusev/parsedown": "~1.7",
                 "ext-mbstring": "*",
                 "ext-openssl": "*",
-                "league/flysystem": "1.1.4",
+                "league/flysystem": "1.1.5",
                 "monolog/monolog": "~1.12",
                 "mtdowling/cron-expression": "~1.0",
                 "nesbot/carbon": "^1.26.0",
